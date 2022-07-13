@@ -2,7 +2,20 @@ import k from "./kaboom.js"
 import enemy from "./enemy.js"
 import bullet from "./bullet.js"
 
-loadSprite("heli", "./assets/sprites/heli.png");
+loadSprite("heli", "./assets/sprites/heli.png", {
+    sliceX: 2,
+    // Define animations
+    anims: {
+        "fly": {
+            // Starts from frame 0, ends at frame 1 then loops
+            from: 0,
+            to: 1,
+            // Frame per second
+            speed: 18,
+            loop: true
+        },
+    }
+});
 
 const HELI_SPEED = 300;
 
@@ -12,6 +25,8 @@ const heli = add([
     pos(400, 300),
     "heli"
 ]);
+
+heli.play("fly");
 
 loadSound("shoot", "./assets/sfx/shoot.wav");
 loadSound("explosion", "./assets/sfx/explosion.wav");
@@ -31,6 +46,11 @@ keyDown("left", () => {
 
 keyDown("right", () => {
     heli.move(HELI_SPEED, 0);
+});
+
+//set up the game screen area
+keyPress("f", () => {
+    fullscreen(!isFullscreen())
 });
 
 //shoot
