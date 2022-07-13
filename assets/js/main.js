@@ -38,7 +38,7 @@ keyDown("right", () => {
 let bullets = new Set();
 
 keyPress("z", () => {
-    bullets.add(new bullet(heli.screenPos().x, heli.screenPos().y, 900));
+    bullets.add(new bullet(heli.screenPos().x + 170, heli.screenPos().y + 70, 900));
     console.log("boom");
     play("shoot");
 });
