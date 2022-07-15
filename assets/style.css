@@ -34,3 +34,8 @@
     top: 400px;
     
 }
+
+/* Drawable element that displays rendered gameplay from Kaboom */
+#game_canvas {
+    margin: auto;
+}
