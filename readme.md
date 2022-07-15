@@ -4,8 +4,6 @@ A "retro emoji" shooter game. Get the bad guys. Save The Hoff.
 [Play Hofflecopter Here](https://andrewdempsey2018.github.io/hoffle-copter/)
 ### Controls
 
-If playing in browser, left click browser playfield to activate controls
-
 Up, Down, Left, Right - Fly
 Z - shoot
 F / ESC - toggle fullscreen
@@ -41,12 +39,14 @@ Main repo set up and shared. Team members forked the project to begin work. Supp
 Kanban board started and tasks assignment started. 
 
 Long live the Hoff!
+---
+## Wireframes
 
+### Level Backgrounds
 
-
-
-
-
+![Image of space level](./assets/readme/space_level.png)
+![Image of city level](./assets/readme/city_level.png)
+![Image of beach level](./assets/readme/beach_level.png)
 
 
 Decisions made friday:
