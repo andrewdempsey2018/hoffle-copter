@@ -1,6 +1,12 @@
 import k from "./kaboom.js"
 import enemy from "./enemy.js"
 import bullet from "./bullet.js"
+import cityScape from "./cityscape.js"
+import cloud from "./cloud.js"
+
+
+
+
 
 loadSprite("heli", "./assets/sprites/heli.png", {
     sliceX: 2,
@@ -53,6 +59,23 @@ keyPress("f", () => {
     fullscreen(!isFullscreen())
 });
 
+// Clouds 
+
+let cloudColl = new Set();
+
+// Different cloud initial states
+
+for (let i = 0; i < 4; i++) {
+cloudColl.add(new cloud(rand(500, 850), rand(0, 100), rand(-2, -10), rand(40, 90)))
+}
+
+// City Skyline 
+
+let cityScapeColl = new Set();
+
+// Skyline initial state
+cityScapeColl.add(new cityScape(512, 384, -20));
+
 //shoot
 
 let bullets = new Set();
@@ -84,6 +107,16 @@ action(() => {
 
     bullets.forEach(bullet => {
         bullet.move();
+    });
+    
+    // Moving Cityscape 
+    cityScapeColl.forEach(cityScape => {
+        cityScape.move();
+    });
+
+    // Moving Clouds in background
+    cloudColl.forEach(cloud => {
+        cloud.move();
     });
 
 
