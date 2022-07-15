@@ -47,6 +47,11 @@ Long live the Hoff!
 
 ---
 ## Wireframes
+* A user should be able to load the main game.
+* A user should understand the purpose of the website.
+* A user should be able to active the game.
+* A user should be able to find the controls for the game.
+* A user should be able to control the should effects.
 
 ### Level Backgrounds
 
