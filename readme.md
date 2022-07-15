@@ -57,17 +57,15 @@ Long live the Hoff!
 
 
 ## Wireframes
-* A user should be able to load the main game.
-* A user should understand the purpose of the website.
-* A user should be able to active the game.
-* A user should be able to find the controls for the game.
-* A user should be able to control the should effects.
-
 ### Level Backgrounds
 
+Space Level
 ![Image of space level](./assets/readme/space_level.png)
+City Level
 ![Image of city level](./assets/readme/city_level.png)
+Beach Level (including update)
 ![Image of beach level](./assets/readme/beach_level.png)
+![Image of beach level](./assets/readme/beach_update.png)
 
 ## Technologies Used
 
