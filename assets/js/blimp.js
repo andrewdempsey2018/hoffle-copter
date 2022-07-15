@@ -1,6 +1,22 @@
 import k from "./kaboom.js"
 
-loadSprite("blimp", "./assets/sprites/blimp.png");
+loadSprite("blimp", "./assets/sprites/blimp.png", {
+    sliceX: 2,
+    // Define animations
+    anims: {
+        "float": {
+            // Starts from frame 0, ends at frame 1 then loops
+            from: 0,
+            to: 1,
+            // Frame per second
+            speed: 8,
+            loop: true
+        },
+    }
+});
+
+
+
 class blimp {
 
     constructor(xPos, yPos, xSpeed, ySpeed) {
@@ -16,6 +32,8 @@ class blimp {
             k.pos(this.xPos, this.yPos),
             "blimp"
         ]);
+
+        this.spr.play("float")
     }
 
     move() {
