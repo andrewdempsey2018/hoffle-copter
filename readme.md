@@ -38,7 +38,13 @@ Main repo set up and shared. Team members forked the project to begin work. Supp
 
 Kanban board started and tasks assignment started. 
 
+#### Extra design decisions made Friday morning
+*Levels - Beach, city, space
+*Additional enemies to be added
+*Add a collectible like coins etc
+
 Long live the Hoff!
+
 ---
 ## Wireframes
 
@@ -48,16 +54,28 @@ Long live the Hoff!
 ![Image of city level](./assets/readme/city_level.png)
 ![Image of beach level](./assets/readme/beach_level.png)
 
+## Technologies Used
 
-Decisions made friday:
-Levels - Beach, city, space
-Additional enemy code added
+### Project built on:
+JavaScript | HTML | CSS
 
-Added collectibles idea
+### Additional :
+* Kaboom.js 
+* Git
+* GitHub
+* JS Code
+* Google DevTools
+* Am I Responsive?
+
+
+## Testing
+
+## Deployment
+
+---
 
 ## Credits
 
 ### Images
-Blimp - www.asciiart.eu
-Sun - www.pinclipart.com
-
+*Blimp - www.asciiart.eu
+*Sun - www.pinclipart.comS
