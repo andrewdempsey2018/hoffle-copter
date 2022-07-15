@@ -24,6 +24,30 @@ loadSprite("heli", "./assets/sprites/heli.png", {
     }
 });
 
+
+/* Backround assets loaded here */
+
+// City Skyline 
+
+let cityScapeColl = new Set();
+
+// Skyline initial state
+cityScapeColl.add(new cityScape(512, 384, -20));
+
+
+// Clouds 
+
+let cloudColl = new Set();
+
+// Different cloud initial states
+
+for (let i = 0; i < 4; i++) {
+    cloudColl.add(new cloud(rand(500, 850), rand(0, 100), rand(-2, -10), rand(40, 90)))
+}
+
+
+/* Sprite assets loaded here */
+
 const HELI_SPEED = 300;
 
 const heli = add([
@@ -40,7 +64,9 @@ loadSound("explosion", "./assets/sfx/explosion.wav");
 
 // controls
 keyDown("up", () => {
-    heli.move(0, -HELI_SPEED);
+    if (heli.pos.y > 0) {
+        heli.move(0, -HELI_SPEED);
+    }
 });
 
 keyDown("down", () => {
@@ -48,7 +74,9 @@ keyDown("down", () => {
 });
 
 keyDown("left", () => {
-    heli.move(-HELI_SPEED, 0);
+    if (heli.pos.x > 0) {
+        heli.move(-HELI_SPEED, 0);
+    }
 });
 
 keyDown("right", () => {
@@ -60,22 +88,9 @@ keyPress("f", () => {
     fullscreen(!isFullscreen())
 });
 
-// Clouds 
 
-let cloudColl = new Set();
 
-// Different cloud initial states
 
-for (let i = 0; i < 4; i++) {
-cloudColl.add(new cloud(rand(500, 850), rand(0, 100), rand(-2, -10), rand(40, 90)))
-}
-
-// City Skyline 
-
-let cityScapeColl = new Set();
-
-// Skyline initial state
-cityScapeColl.add(new cityScape(512, 384, -20));
 
 //shoot
 
@@ -109,7 +124,7 @@ collides("bullet", "blimp", (bullet, blimp) => {
 });
 
 loop(2, () => {
-    console.log("asdasdasda")
+    console.log("level script call")
 });
 
 
@@ -122,7 +137,7 @@ action(() => {
     bullets.forEach(bullet => {
         bullet.move();
     });
-    
+
     // Moving Cityscape 
     cityScapeColl.forEach(cityScape => {
         cityScape.move();

@@ -1,7 +1,6 @@
 import k from "./kaboom.js"
 
 loadSprite("blimp", "./assets/sprites/blimp.png");
-
 class blimp {
 
     constructor(xPos, yPos, xSpeed, ySpeed) {
