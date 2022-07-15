@@ -1,15 +1,15 @@
+/* Styling section for Background Scenery */
+
 
 #sun-emoji {
     position: absolute;
     right: 55px;
     top: 50px;
-
 }
 
 #sun {
     height: 90px;
     width: 90px;
-
 }
 
 .cloud {
@@ -20,19 +20,16 @@
     position: absolute;
     right: 30px;
     top: 150px;
-
 }
 #cloud-emoji-3 {
     position: absolute;
     left: 200px;
     top: 80px;
-    
 }
 #cloud-emoji-4 {
     position: absolute;
     right: 150px;
     top: 400px;
-    
 }
 
 /* Drawable element that displays rendered gameplay from Kaboom */

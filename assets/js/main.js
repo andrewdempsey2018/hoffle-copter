@@ -2,6 +2,12 @@ import k from "./kaboom.js"
 import enemy from "./enemy.js"
 import blimp from "./blimp.js";
 import bullet from "./bullet.js"
+import cityScape from "./cityscape.js"
+import cloud from "./cloud.js"
+
+
+
+
 
 loadSprite("heli", "./assets/sprites/heli.png", {
     sliceX: 2,
@@ -17,6 +23,30 @@ loadSprite("heli", "./assets/sprites/heli.png", {
         },
     }
 });
+
+
+/* Backround assets loaded here */
+
+// City Skyline 
+
+let cityScapeColl = new Set();
+
+// Skyline initial state
+cityScapeColl.add(new cityScape(512, 384, -20));
+
+
+// Clouds 
+
+let cloudColl = new Set();
+
+// Different cloud initial states
+
+for (let i = 0; i < 4; i++) {
+    cloudColl.add(new cloud(rand(500, 850), rand(0, 100), rand(-2, -10), rand(40, 90)))
+}
+
+
+/* Sprite assets loaded here */
 
 const HELI_SPEED = 300;
 
@@ -34,7 +64,9 @@ loadSound("explosion", "./assets/sfx/explosion.wav");
 
 // controls
 keyDown("up", () => {
-    heli.move(0, -HELI_SPEED);
+    if (heli.pos.y > 0) {
+        heli.move(0, -HELI_SPEED);
+    }
 });
 
 keyDown("down", () => {
@@ -42,7 +74,9 @@ keyDown("down", () => {
 });
 
 keyDown("left", () => {
-    heli.move(-HELI_SPEED, 0);
+    if (heli.pos.x > 0) {
+        heli.move(-HELI_SPEED, 0);
+    }
 });
 
 keyDown("right", () => {
@@ -54,13 +88,16 @@ keyPress("f", () => {
     fullscreen(!isFullscreen())
 });
 
+
+
+
+
 //shoot
 
 let bullets = new Set();
 
 keyPress("z", () => {
     bullets.add(new bullet(heli.screenPos().x + 170, heli.screenPos().y + 70, 900));
-    console.log("boom");
     play("shoot");
 });
 
@@ -86,6 +123,11 @@ collides("bullet", "blimp", (bullet, blimp) => {
     blimp.moveTo(2500, 1500);
 });
 
+loop(2, () => {
+    console.log("level script call")
+});
+
+
 action(() => {
 
     colls.forEach(coll => {
@@ -94,6 +136,16 @@ action(() => {
 
     bullets.forEach(bullet => {
         bullet.move();
+    });
+
+    // Moving Cityscape 
+    cityScapeColl.forEach(cityScape => {
+        cityScape.move();
+    });
+
+    // Moving Clouds in background
+    cloudColl.forEach(cloud => {
+        cloud.move();
     });
 
 
