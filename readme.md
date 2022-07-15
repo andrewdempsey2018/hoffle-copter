@@ -1,9 +1,7 @@
 # Concept
-
-## Retro emoji shooter
-
-* Javascript
-* Kaboom JS
+## Hofflecopter
+A "retro emoji" shooter game. Get the bad guys. Save The Hoff.
+[Play Hofflecopter Here](https://andrewdempsey2018.github.io/hoffle-copter/)
 
 ### Controls
 
@@ -13,7 +11,9 @@ Up, Down, Left, Right - Fly
 Z - shoot
 F / ESC - toggle fullscreen
 
-- link to deployed game
+
+---
+
 
 ## Credits
 
