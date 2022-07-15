@@ -1,5 +1,6 @@
 import k from "./kaboom.js"
 import enemy from "./enemy.js"
+import blimp from "./blimp.js";
 import bullet from "./bullet.js"
 import cityScape from "./cityscape.js"
 import cloud from "./cloud.js"
@@ -97,6 +98,15 @@ collides("bullet", "enemy", (bullet, enemy) => {
     enemy.moveTo(2500, 1500);
 });
 
+for (let i = 0; i < 4; i++) {
+    colls.add(new blimp(rand(200, 500), rand(50, 500), rand(50, 230), rand(-50, -300)));
+};
+
+collides("bullet", "blimp", (bullet, blimp) => {
+    play("explosion");
+    bullet.moveTo(1500, 1500);
+    blimp.moveTo(2500, 1500);
+});
 
 loop(2, () => {
     console.log("asdasdasda")
