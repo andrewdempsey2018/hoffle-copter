@@ -5,12 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
     <title>Retro emoji shooter</title>
 </head>
 
+
 <body>
-    
+
+    <div id="sun-emoji">
+        <img id="sun" src="assets/scenery/sun.png">
+    </div>
+
+    <div id="cloud-emoji-1">
+        <img class="cloud" src="assets/scenery/cloud.png">
+    </div>
+    <div id="cloud-emoji-2">
+        <img class="cloud" src="assets/scenery/cloud.png">
+    </div>
+    <div id="cloud-emoji-3">
+        <img class="cloud" src="assets/scenery/cloud.png">
+    </div>
+    <div id="cloud-emoji-4">
+        <img class="cloud" src="assets/scenery/cloud.png">
+    </div>
+
+    <!-- Canvas hosts the actual gameplay as rendered with Kaboom -->
+    <canvas id="game_canvas"></canvas>
+
+    <!-- main js file handles game loop -->
     <script type="module" src="./assets/js/main.js"></script>
 </body>
+
+
 
 </html>
