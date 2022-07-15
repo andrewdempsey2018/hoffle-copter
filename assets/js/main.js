@@ -82,7 +82,6 @@ let bullets = new Set();
 
 keyPress("z", () => {
     bullets.add(new bullet(heli.screenPos().x + 170, heli.screenPos().y + 70, 900));
-    console.log("boom");
     play("shoot");
 });
 
@@ -96,6 +95,11 @@ collides("bullet", "enemy", (bullet, enemy) => {
     play("explosion");
     bullet.moveTo(1500, 1500);
     enemy.moveTo(2500, 1500);
+});
+
+
+loop(2, () => {
+    console.log("asdasdasda")
 });
 
 
