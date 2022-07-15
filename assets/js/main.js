@@ -63,28 +63,28 @@ loadSound("shoot", "./assets/sfx/shoot.wav");
 loadSound("explosion", "./assets/sfx/explosion.wav");
 
 // controls
-keyDown("up", () => {
+onKeyDown("up", () => {
     if (heli.pos.y > 0) {
         heli.move(0, -HELI_SPEED);
     }
 });
 
-keyDown("down", () => {
+onKeyDown("down", () => {
     heli.move(0, HELI_SPEED);
 });
 
-keyDown("left", () => {
+onKeyDown("left", () => {
     if (heli.pos.x > 0) {
         heli.move(-HELI_SPEED, 0);
     }
 });
 
-keyDown("right", () => {
+onKeyDown("right", () => {
     heli.move(HELI_SPEED, 0);
 });
 
 //set up the game screen area
-keyPress("f", () => {
+onKeyPress("f", () => {
     fullscreen(!isFullscreen())
 });
 
@@ -107,7 +107,7 @@ for (let i = 0; i < 4; i++) {
     colls.add(new enemy(rand(0, 700), rand(0, 500), rand(10, 530)));
 };
 
-collides("bullet", "enemy", (bullet, enemy) => {
+onCollide("bullet", "enemy", (bullet, enemy) => {
     play("explosion");
     bullet.moveTo(1500, 1500);
     enemy.moveTo(2500, 1500);
@@ -117,7 +117,7 @@ for (let i = 0; i < 4; i++) {
     colls.add(new blimp(rand(200, 500), rand(50, 500), rand(50, 230), rand(-50, -300)));
 };
 
-collides("bullet", "blimp", (bullet, blimp) => {
+onCollide("bullet", "blimp", (bullet, blimp) => {
     play("explosion");
     bullet.moveTo(1500, 1500);
     blimp.moveTo(2500, 1500);
@@ -128,7 +128,7 @@ loop(2, () => {
 });
 
 
-action(() => {
+onUpdate(() => {
 
     colls.forEach(coll => {
         coll.move();
