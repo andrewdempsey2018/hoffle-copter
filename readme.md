@@ -1,33 +1,33 @@
-# Concept
-
-## Retro emoji shooter
-
-* Javascript
-* Kaboom JS
-
+# Hofflecopter
+## Concept
+A "retro emoji" shooter game. Get the bad guys. Save The Hoff.
+[Play Hofflecopter Here](https://andrewdempsey2018.github.io/hoffle-copter/)
 ### Controls
-
-If playing in browser, left click browser playfield to activate controls
 
 Up, Down, Left, Right - Fly
 Z - shoot
 F / ESC - toggle fullscreen
 
-### Progress
+---
+## Project Brief
+We set out to design a project around the theme of "World Emoji Day" celebrated on 17th July. To satify this goal, we have combined the use of retro ASCII emoji's with The Hoff (born on emoji day), to bring you this exciting game of skill and dexterity. 
 
-# H2 Team Meetings Log
+### Initial Concept Deployment
+![screenshot](/assets/readme/image1.png)
 
-# H3 Team Call 13/07/2022
+## Design Ideas Development
+
+### Team Call 13/07/2022
 First team call to discuss ideas. 
 
-# H4 Project ideas:
+#### Project ideas:
 * Some kind of static site with quiz, memory game, how do we make this innovative?
 * Project based on famous personality born on World Emoji Day - The Hoff?
 * Emoji game - Mario Kart type collect the emojis.
 * Angry Birds with emojis.
 * Social media website with a focus on emojis.
 
-# H3 Team Call 14/07/2022
+### Team Call 14/07/2022
 Overview of meeting : Project decisions, repo set up, technical issues of VSCode and Git ironed out
 
 **Project name decided upon** - Hofflecopter.
@@ -38,12 +38,44 @@ Main repo set up and shared. Team members forked the project to begin work. Supp
 
 Kanban board started and tasks assignment started. 
 
+#### Extra design decisions made Friday morning
+*Levels - Beach, city, space
+*Additional enemies to be added
+*Add a collectible like coins etc
+
 Long live the Hoff!
 
-#### Screenshot
-![screenshot](/assets/readme/image1.png)
+---
+## Wireframes
+
+### Level Backgrounds
+
+![Image of space level](./assets/readme/space_level.png)
+![Image of city level](./assets/readme/city_level.png)
+![Image of beach level](./assets/readme/beach_level.png)
+
+## Technologies Used
+
+### Project built on:
+JavaScript | HTML | CSS
+
+### Additional :
+* Kaboom.js 
+* Git
+* GitHub
+* JS Code
+* Google DevTools
+* Am I Responsive?
 
 
-### Adding something!
-Something!
-Add something new
+## Testing
+
+## Deployment
+
+---
+
+## Credits
+
+### Images
+*Blimp - www.asciiart.eu
+*Sun - www.pinclipart.comS
