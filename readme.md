@@ -46,6 +46,16 @@ Kanban board started and tasks assignment started.
 Long live the Hoff!
 
 ---
+
+## User Stories
+
+* A user should be able to load the main game.
+* A user should understand the purpose of the website.
+* A user should be able to active the game.
+* A user should be able to find the controls for the game.
+* A user should be able to control the should effects.
+
+
 ## Wireframes
 
 ### Level Backgrounds
