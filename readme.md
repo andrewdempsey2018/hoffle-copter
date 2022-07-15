@@ -1,8 +1,7 @@
-# Concept
-## Hofflecopter
+# Hofflecopter
+## Concept
 A "retro emoji" shooter game. Get the bad guys. Save The Hoff.
 [Play Hofflecopter Here](https://andrewdempsey2018.github.io/hoffle-copter/)
-
 ### Controls
 
 If playing in browser, left click browser playfield to activate controls
@@ -11,22 +10,14 @@ Up, Down, Left, Right - Fly
 Z - shoot
 F / ESC - toggle fullscreen
 
-
 ---
+## Project Brief
+We set out to design a project around the theme of "World Emoji Day" celebrated on 17th July. To satify this goal, we have combined the use of retro ASCII emoji's with The Hoff (born on emoji day), to bring you this exciting game of skill and dexterity. 
 
+### Initial Concept Deployment
+![screenshot](/assets/readme/image1.png)
 
-## Credits
-
-### Images
-Blimp - www.asciiart.eu
-Sun - www.pinclipart.com
-
-
-wireframes
-
-### Progress
-
-## Team Meetings Log
+## Design Ideas Development
 
 ### Team Call 13/07/2022
 First team call to discuss ideas. 
@@ -51,13 +42,22 @@ Kanban board started and tasks assignment started.
 
 Long live the Hoff!
 
+
+
+
+
+
+
+
 Decisions made friday:
 Levels - Beach, city, space
 Additional enemy code added
 
 Added collectibles idea
 
+## Credits
 
+### Images
+Blimp - www.asciiart.eu
+Sun - www.pinclipart.com
 
-#### Screenshot
-![screenshot](/assets/readme/image1.png)
