@@ -102,5 +102,6 @@ JavaScript | HTML | CSS
 ## Credits
 
 ### Images
-* Blimp, Alien, Star - www.asciiart.eu
+* Blimp, Alien, Star, Space background - www.asciiart.eu
 * Sun - www.pinclipart.com
+* UFO - asciiart.website
