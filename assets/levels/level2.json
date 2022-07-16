@@ -1,0 +1,50 @@
+[
+    {
+        "time": "00:00",
+        "object": "blimp",
+        "x": 700,
+        "y": 100,
+        "xSpeed": 100,
+        "ySpeed": -50
+    },
+    {
+        "time": "00:01",
+        "object": "blimp",
+        "x": 700,
+        "y": 200,
+        "xSpeed": 100,
+        "ySpeed": -50
+    },
+    {
+        "time": "00:02",
+        "object": "blimp",
+        "x": 700,
+        "y": 150,
+        "xSpeed": 100,
+        "ySpeed": -50
+    },
+    {
+        "time": "00:02",
+        "object": "blimp",
+        "x": 600,
+        "y": 75,
+        "xSpeed": 100,
+        "ySpeed": -50
+    },
+    {
+        "time": "00:02",
+        "object": "blimp",
+        "x": 800,
+        "y": 50,
+        "xSpeed": 100,
+        "ySpeed": -50
+    },
+    {
+        "time": "00:02",
+        "object": "blimp",
+        "x": 750,
+        "y": 50,
+        "xSpeed": 100,
+        "ySpeed": -50
+    }
+]

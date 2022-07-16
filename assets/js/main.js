@@ -4,7 +4,7 @@ import blimp from "./blimp.js";
 import bullet from "./bullet.js"
 import cityScape from "./cityscape.js"
 import cloud from "./cloud.js"
-
+import loadLevel from "./LoadLevel.js";
 
 
 
@@ -41,9 +41,9 @@ let cloudColl = new Set();
 
 // Different cloud initial states
 
-for (let i = 0; i < 4; i++) {
-    cloudColl.add(new cloud(rand(500, 850), rand(0, 100), rand(-2, -10), rand(40, 90)))
-}
+//for (let i = 0; i < 4; i++) {
+//    cloudColl.add(new cloud(rand(500, 850), rand(0, 100), rand(-2, -10), rand(40, 90)))
+//}
 
 
 /* Sprite assets loaded here */
@@ -101,11 +101,7 @@ keyPress("z", () => {
     play("shoot");
 });
 
-let colls = new Set();
-
-for (let i = 0; i < 4; i++) {
-    colls.add(new enemy(rand(0, 700), rand(0, 500), rand(10, 530)));
-};
+let blimpColl = new Set();
 
 onCollide("bullet", "enemy", (bullet, enemy) => {
     play("explosion");
@@ -113,25 +109,35 @@ onCollide("bullet", "enemy", (bullet, enemy) => {
     enemy.moveTo(2500, 1500);
 });
 
-for (let i = 0; i < 4; i++) {
-    colls.add(new blimp(rand(200, 500), rand(50, 500), rand(50, 230), rand(-50, -300)));
-};
-
 onCollide("bullet", "blimp", (bullet, blimp) => {
     play("explosion");
     bullet.moveTo(1500, 1500);
     blimp.moveTo(2500, 1500);
 });
 
-loop(2, () => {
-    console.log("level script call")
+
+const level2 = await loadLevel('./assets/levels/level2.json');
+
+let index = -1;
+let gameObject = null;
+
+loop(4, () => {
+    index++;
+
+    gameObject = level2[index];
+    console.log(typeof gameObject.object);
+
+    if (gameObject.object === "blimp") {
+        //blimpColl.add(new blimp(gameObject['x'], gameObject['y'], gameObject['xSpeed'], gameObject['ySpeed']));
+        blimpColl.add(new blimp(gameObject.x, gameObject.y, gameObject.xSpeed, gameObject.ySpeed));
+    }
 });
 
 
 onUpdate(() => {
 
-    colls.forEach(coll => {
-        coll.move();
+    blimpColl.forEach(blimp => {
+        blimp.move();
     });
 
     bullets.forEach(bullet => {
@@ -147,10 +153,4 @@ onUpdate(() => {
     cloudColl.forEach(cloud => {
         cloud.move();
     });
-
-
-
 });
-
-
-
