@@ -39,9 +39,9 @@ Main repo set up and shared. Team members forked the project to begin work. Supp
 Kanban board started and tasks assignment started. 
 
 #### Extra design decisions made Friday morning
-*Levels - Beach, city, space
-*Additional enemies to be added
-*Add a collectible like coins etc
+* Levels - Beach, city, space
+* Additional enemies to be added
+* Add a collectible like coins etc
 
 Long live the Hoff!
 
@@ -53,7 +53,7 @@ Long live the Hoff!
 * A user should understand the purpose of the website.
 * A user should be able to active the game.
 * A user should be able to find the controls for the game.
-* A user should be able to control the should effects.
+* A user should be able to control the sound effects.
 
 
 ## Wireframes
@@ -67,6 +67,20 @@ Beach Level (including update)
 ![Image of beach level](./assets/readme/beach_level.png)
 ![Image of beach level](./assets/readme/beach_update.png)
 
+## Further Development Notes
+
+#### Project development done on Friday
+* Added clouds to game canvas area
+* Added blimp enemy with code
+* Added cityscape background to level 2 file
+* Found sound effects for project
+
+#### Project development done on Saturday
+* Copper collectible added to project
+* Sound files created for explosion and collectible impact
+
+### Bugs Encountered and Resolutions
+
 ## Technologies Used
 
 ### Project built on:
@@ -79,16 +93,16 @@ JavaScript | HTML | CSS
 * JS Code
 * Google DevTools
 * Am I Responsive?
-
-
-## Testing
+* Canva
 
 ## Deployment
+## Testing
 
----
+--
 
 ## Credits
 
 ### Images
-*Blimp - www.asciiart.eu
-*Sun - www.pinclipart.comS
+* Blimp, Alien, Star, Space background - www.asciiart.eu
+* Sun - www.pinclipart.com
+* UFO - asciiart.website
