@@ -144,6 +144,10 @@ loop(1, () => {
     if (gameObject.object === "copper") {
         collectableColl.add(new collectable(gameObject.x, gameObject.y, gameObject.speed));
     }
+
+    if (gameObject.object === "cityScape") {
+        cityScapeColl.add(new cityScape(gameObject.x, gameObject.y, gameObject.speed));
+    }
 });
 
 onUpdate(() => {

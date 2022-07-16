@@ -141,10 +141,11 @@
     },
     {
         "time": "00:19",
-        "object": "copper",
+        "object": "no spawn",
         "x": 700,
         "y": 150,
-        "speed": -50
+        "speed": -100,
+        "size": 50
     },
     {
         "time": "00:20",
