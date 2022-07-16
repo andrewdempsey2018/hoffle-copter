@@ -27,6 +27,8 @@ let cityScapeColl = new Set();
 let cloudColl = new Set();
 let blimpColl = new Set();
 let planeColl = new Set();
+//collectable game object 
+let collectableColl = new Set();
 
 /* Sprite assets loaded here */
 
@@ -88,16 +90,9 @@ onCollide("bullet", "plane", (bullet, plane) => {
     plane.destroy();
 });
 
-//collectable game object 
-let collectableColl = new Set();
-
-// Collectable initial state and 
-//Add copper sprite to the game area
-collectableColl.add(new collectable(720, 220, -20));
-
 onCollide("heli", "copper", (heli, copper) => {
     play("explosion");
-    destroy(heli);
+    destroy(copper);
     destroy;
 });
 
@@ -172,9 +167,10 @@ onUpdate(() => {
         collectable.move()
     })
 
-});
     // Moving plane
     planeColl.forEach(plane => {
         plane.move();
     });
+
 });
+    
