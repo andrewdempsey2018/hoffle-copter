@@ -77,6 +77,7 @@ Beach Level (including update)
 
 #### Project development done on Saturday
 * Copper collectible added to project
+
 ### Bugs Encountered and Resolutions
 
 ## Technologies Used
