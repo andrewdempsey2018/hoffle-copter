@@ -72,7 +72,25 @@ let collectableColl = new Set();
 
 // Collectable initial state and 
 //Add copper sprite to the game area
-collectableColl.add(new collectable(720, 220, 10));
+collectableColl.add(new collectable(720, 220, -20));
+// collectableColl.add(new collectable(512, 384, -20));
+
+// heli.onCollide("collectable", () => {
+//     destroy(collectable);
+//     addExplosion()
+// })
+
+// heli.onCollide("collectable", () => {
+//     addKaboom(collectable.pos);
+//     shake()
+//     destroy(collectable);
+// })
+
+onCollide("heli", "copper", (heli, copper) => {
+    play("explosion");
+    destroy(heli);
+    destroy(copper);
+});
 
 // City Skyline 
 
