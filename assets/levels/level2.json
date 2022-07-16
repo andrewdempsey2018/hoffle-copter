@@ -1,11 +1,10 @@
 [
     {
         "time": "00:01",
-        "object": "no spawn",
-        "x": 700,
-        "y": 150,
-        "speed": -100,
-        "size": 50
+        "object": "cityScape",
+        "x": 280,
+        "y": 450,
+        "speed": -100
     },
     {
         "time": "00:02",
@@ -17,10 +16,10 @@
     },
     {
         "time": "00:03",
-        "object": "copper",
-        "x": 700,
-        "y": 150,
-        "speed": -50
+        "object": "cityScape",
+        "x": 1000,
+        "y": 450,
+        "speed": -100
     },
     {
         "time": "00:04",
@@ -88,11 +87,10 @@
     },
     {
         "time": "00:12",
-        "object": "cloud",
-        "x": 1024,
-        "y": 250,
-        "speed": -100,
-        "size": 50
+        "object": "cityScape",
+        "x": 1000,
+        "y": 450,
+        "speed": -100
     },
     {
         "time": "00:13",
@@ -157,11 +155,10 @@
     },
     {
         "time": "00:21",
-        "object": "no spawn",
-        "x": 700,
-        "y": 150,
-        "speed": -100,
-        "size": 50
+        "object": "cityScape",
+        "x": 1000,
+        "y": 450,
+        "speed": -100
     },
     {
         "time": "00:22",
@@ -226,10 +223,10 @@
     },
     {
         "time": "00:30",
-        "object": "plane",
-        "x": 1024,
-        "y": 415,
-        "speed": -250
+        "object": "cityScape",
+        "x": 1000,
+        "y": 450,
+        "speed": -100
     },
     {
         "time": "00:31",
@@ -294,11 +291,10 @@
     },
     {
         "time": "00:39",
-        "object": "blimp",
-        "x": 500,
-        "y": 150,
-        "xSpeed": -100,
-        "ySpeed": 50
+        "object": "cityScape",
+        "x": 1000,
+        "y": 450,
+        "speed": -100
     },
     {
         "time": "00:40",
@@ -366,11 +362,10 @@
     },
     {
         "time": "00:48",
-        "object": "no spawn",
-        "x": 700,
-        "y": 150,
-        "speed": -100,
-        "size": 50
+        "object": "cityScape",
+        "x": 1000,
+        "y": 450,
+        "speed": -100
     },
     {
         "time": "00:49",
@@ -438,11 +433,10 @@
     },
     {
         "time": "00:57",
-        "object": "no spawn",
-        "x": 700,
-        "y": 150,
-        "speed": -100,
-        "size": 50
+        "object": "cityScape",
+        "x": 1000,
+        "y": 450,
+        "speed": -100
     },
     {
         "time": "00:58",
