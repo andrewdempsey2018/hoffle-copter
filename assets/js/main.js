@@ -1,13 +1,10 @@
 import k from "./kaboom.js"
-import enemy from "./enemy.js"
+import plane from "./plane.js"
 import blimp from "./blimp.js";
 import bullet from "./bullet.js"
 import cityScape from "./cityscape.js"
 import cloud from "./cloud.js"
-
-
-
-
+import loadLevel from "./LoadLevel.js";
 
 loadSprite("heli", "./assets/sprites/heli.png", {
     sliceX: 2,
@@ -24,27 +21,11 @@ loadSprite("heli", "./assets/sprites/heli.png", {
     }
 });
 
-
-/* Backround assets loaded here */
-
-// City Skyline 
-
+/* Initialise collections that will hold game objects */
 let cityScapeColl = new Set();
-
-// Skyline initial state
-cityScapeColl.add(new cityScape(512, 384, -20));
-
-
-// Clouds 
-
 let cloudColl = new Set();
-
-// Different cloud initial states
-
-for (let i = 0; i < 4; i++) {
-    cloudColl.add(new cloud(rand(500, 850), rand(0, 100), rand(-2, -10), rand(40, 90)))
-}
-
+let blimpColl = new Set();
+let planeColl = new Set();
 
 /* Sprite assets loaded here */
 
@@ -59,10 +40,11 @@ const heli = add([
 
 heli.play("fly");
 
+/* Load sound effects */
 loadSound("shoot", "./assets/sfx/shoot.wav");
 loadSound("explosion", "./assets/sfx/explosion.wav");
 
-// controls
+/* Setup control scheme for player */
 onKeyDown("up", () => {
     if (heli.pos.y > 0) {
         heli.move(0, -HELI_SPEED);
@@ -88,12 +70,8 @@ onKeyPress("f", () => {
     fullscreen(!isFullscreen())
 });
 
-
-
-
-
-//shoot
-
+/* Create players bullet collection and handle
+player controls to allow shooting */
 let bullets = new Set();
 
 keyPress("z", () => {
@@ -101,37 +79,63 @@ keyPress("z", () => {
     play("shoot");
 });
 
-let colls = new Set();
+/* Collision between bullets and enemys */
 
-for (let i = 0; i < 4; i++) {
-    colls.add(new enemy(rand(0, 700), rand(0, 500), rand(10, 530)));
-};
-
-onCollide("bullet", "enemy", (bullet, enemy) => {
+onCollide("bullet", "plane", (bullet, plane) => {
     play("explosion");
-    bullet.moveTo(1500, 1500);
-    enemy.moveTo(2500, 1500);
+    bullet.destroy();
+    plane.destroy();
 });
-
-for (let i = 0; i < 4; i++) {
-    colls.add(new blimp(rand(200, 500), rand(50, 500), rand(50, 230), rand(-50, -300)));
-};
 
 onCollide("bullet", "blimp", (bullet, blimp) => {
     play("explosion");
-    bullet.moveTo(1500, 1500);
-    blimp.moveTo(2500, 1500);
+    bullet.destroy();
+    blimp.destroy();
 });
 
-loop(2, () => {
-    console.log("level script call")
-});
+/* Here we read each entry from the level JSON file
+every one second. If the level file contains an entry 'no spawn' we ignore it
+If the level file contains information on a game object, we instanciate it
+using the values from the JSON file */
 
+const level2 = await loadLevel('./assets/levels/level2.json'); //grab the level from assets folder
+
+/* index is the position in the level script where we are at. 
+There is a position for every second of real time that passes.
+For now, limited to 60 seconds */
+let index = -1;
+
+/* JSON representation of a game object.
+We use this JSON data to pass into the actual game object constructors */
+let gameObject = null; 
+
+const LEVEL_TIME_SECONDS = 60; //make sure the event timer does not look for out of bounds JSON data
+
+loop(1, () => {
+
+    if (index < LEVEL_TIME_SECONDS) {
+        index++;
+    }
+
+    gameObject = level2[index];
+
+    if (gameObject.object === "blimp") {
+        blimpColl.add(new blimp(gameObject.x, gameObject.y, gameObject.xSpeed, gameObject.ySpeed));
+    }
+
+    if (gameObject.object === "cloud") {
+        cloudColl.add(new cloud(gameObject.x, gameObject.y, gameObject.speed, gameObject.sized));
+    }
+
+    if (gameObject.object === "plane") {
+        planeColl.add(new plane(gameObject.x, gameObject.y, gameObject.speed));
+    }
+});
 
 onUpdate(() => {
 
-    colls.forEach(coll => {
-        coll.move();
+    blimpColl.forEach(blimp => {
+        blimp.move();
     });
 
     bullets.forEach(bullet => {
@@ -148,9 +152,8 @@ onUpdate(() => {
         cloud.move();
     });
 
-
-
+    // Moving plane
+    planeColl.forEach(plane => {
+        plane.move();
+    });
 });
-
-
-
