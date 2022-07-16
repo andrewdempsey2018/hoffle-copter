@@ -83,6 +83,7 @@ JavaScript | HTML | CSS
 * JS Code
 * Google DevTools
 * Am I Responsive?
+* Canva
 
 ## Deployment
 ## Testing
