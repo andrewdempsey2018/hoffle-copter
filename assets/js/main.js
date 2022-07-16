@@ -70,8 +70,9 @@ cloudColl.add(new cloud(rand(500, 850), rand(0, 100), rand(-2, -10), rand(40, 90
 //collectable game object 
 let collectableColl = new Set();
 
-//copper initial states
-collectableColl.add(new collectable(720, 220, -10));
+// Collectable initial state and 
+//Add copper sprite to the game area
+collectableColl.add(new collectable(720, 220, 10));
 
 // City Skyline 
 
@@ -123,7 +124,10 @@ action(() => {
         cloud.move();
     });
 
-
+    //Moving copper game object
+    collectableColl.forEach(collectable => {
+        collectable.move()
+    })
 
 });
 

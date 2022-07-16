@@ -1,5 +1,6 @@
 import k from "./kaboom.js"
 
+//load assets 
 loadSprite("copper", "./assets/sprites/copper.png");
 
 class collectable {
@@ -16,6 +17,11 @@ class collectable {
             "copper"
         ]);
     }
+
+    move() {
+        this.spr.move(0, this.speed);
+
+    };
 
     
 }
