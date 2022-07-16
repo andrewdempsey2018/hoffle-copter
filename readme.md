@@ -93,5 +93,5 @@ JavaScript | HTML | CSS
 ## Credits
 
 ### Images
-* Blimp - www.asciiart.eu
-* Sun - www.pinclipart.comS
+* Blimp, Alien, Star - www.asciiart.eu
+* Sun - www.pinclipart.com
