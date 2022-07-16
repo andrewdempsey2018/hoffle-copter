@@ -4,6 +4,7 @@ import blimp from "./blimp.js";
 import bullet from "./bullet.js"
 import cityScape from "./cityscape.js"
 import cloud from "./cloud.js"
+import collectable from "./collectable.js"
 import loadLevel from "./LoadLevel.js";
 
 loadSprite("heli", "./assets/sprites/heli.png", {
@@ -87,6 +88,20 @@ onCollide("bullet", "plane", (bullet, plane) => {
     plane.destroy();
 });
 
+//collectable game object 
+let collectableColl = new Set();
+
+// Collectable initial state and 
+//Add copper sprite to the game area
+collectableColl.add(new collectable(720, 220, -20));
+
+onCollide("heli", "copper", (heli, copper) => {
+    play("explosion");
+    destroy(heli);
+    destroy;
+});
+
+// City Skyline
 onCollide("bullet", "blimp", (bullet, blimp) => {
     play("explosion");
     bullet.destroy();
@@ -152,6 +167,12 @@ onUpdate(() => {
         cloud.move();
     });
 
+    //Moving copper game object
+    collectableColl.forEach(collectable => {
+        collectable.move()
+    })
+
+});
     // Moving plane
     planeColl.forEach(plane => {
         plane.move();
