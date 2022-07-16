@@ -3,9 +3,7 @@ import enemy from "./enemy.js"
 import bullet from "./bullet.js"
 import cityScape from "./cityscape.js"
 import cloud from "./cloud.js"
-
-
-
+import collectable from "./collectable.js"
 
 
 loadSprite("heli", "./assets/sprites/heli.png", {
@@ -68,6 +66,12 @@ let cloudColl = new Set();
 for (let i = 0; i < 4; i++) {
 cloudColl.add(new cloud(rand(500, 850), rand(0, 100), rand(-2, -10), rand(40, 90)))
 }
+
+//collectable game object 
+let collectableColl = new Set();
+
+//copper initial states
+collectableColl.add(new collectable(720, 220, -10));
 
 // City Skyline 
 
