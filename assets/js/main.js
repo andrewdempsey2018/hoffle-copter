@@ -93,7 +93,6 @@ onCollide("bullet", "plane", (bullet, plane) => {
 onCollide("heli", "copper", (heli, copper) => {
     play("explosion");
     destroy(copper);
-    destroy;
 });
 
 // City Skyline
