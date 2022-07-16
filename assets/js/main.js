@@ -1,5 +1,5 @@
 import k from "./kaboom.js"
-import enemy from "./enemy.js"
+import plane from "./plane.js"
 import blimp from "./blimp.js";
 import bullet from "./bullet.js"
 import cityScape from "./cityscape.js"
@@ -25,26 +25,11 @@ loadSprite("heli", "./assets/sprites/heli.png", {
 });
 
 
-/* Backround assets loaded here */
-
-// City Skyline 
-
+/* Initialise collections that will hold game objects */
 let cityScapeColl = new Set();
-
-// Skyline initial state
-cityScapeColl.add(new cityScape(512, 384, -20));
-
-
-// Clouds 
-
 let cloudColl = new Set();
-
-// Different cloud initial states
-
-//for (let i = 0; i < 4; i++) {
-//    cloudColl.add(new cloud(rand(500, 850), rand(0, 100), rand(-2, -10), rand(40, 90)))
-//}
-
+let blimpColl = new Set();
+let planeColl = new Set();
 
 /* Sprite assets loaded here */
 
@@ -101,7 +86,7 @@ keyPress("z", () => {
     play("shoot");
 });
 
-let blimpColl = new Set();
+
 
 onCollide("bullet", "enemy", (bullet, enemy) => {
     play("explosion");
@@ -120,16 +105,26 @@ const level2 = await loadLevel('./assets/levels/level2.json');
 
 let index = -1;
 let gameObject = null;
+const LEVEL_TIME_SECONDS = 60;
 
-loop(4, () => {
-    index++;
+loop(1, () => {
+
+    if (index < LEVEL_TIME_SECONDS) {
+        index++;
+    }
 
     gameObject = level2[index];
-    console.log(typeof gameObject.object);
 
     if (gameObject.object === "blimp") {
-        //blimpColl.add(new blimp(gameObject['x'], gameObject['y'], gameObject['xSpeed'], gameObject['ySpeed']));
         blimpColl.add(new blimp(gameObject.x, gameObject.y, gameObject.xSpeed, gameObject.ySpeed));
+    }
+
+    if (gameObject.object === "cloud") {
+        cloudColl.add(new cloud(gameObject.x, gameObject.y, gameObject.speed, gameObject.sized));
+    }
+
+    if (gameObject.object === "plane") {
+        planeColl.add(new plane(gameObject.x, gameObject.y, gameObject.speed));
     }
 });
 
@@ -152,5 +147,10 @@ onUpdate(() => {
     // Moving Clouds in background
     cloudColl.forEach(cloud => {
         cloud.move();
+    });
+
+    // Moving plane
+    planeColl.forEach(plane => {
+        plane.move();
     });
 });
