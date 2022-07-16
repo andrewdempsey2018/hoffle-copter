@@ -83,14 +83,14 @@ keyPress("z", () => {
 
 onCollide("bullet", "plane", (bullet, plane) => {
     play("explosion");
-    bullet.moveTo(1500, 1500);
-    plane.moveTo(2500, 1500);
+    bullet.destroy();
+    plane.destroy();
 });
 
 onCollide("bullet", "blimp", (bullet, blimp) => {
     play("explosion");
-    bullet.moveTo(1500, 1500);
-    blimp.moveTo(2500, 1500);
+    bullet.destroy();
+    blimp.destroy();
 });
 
 /* Here we read each entry from the level JSON file
