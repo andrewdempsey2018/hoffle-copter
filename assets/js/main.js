@@ -140,6 +140,10 @@ loop(1, () => {
     if (gameObject.object === "plane") {
         planeColl.add(new plane(gameObject.x, gameObject.y, gameObject.speed));
     }
+
+    if (gameObject.object === "copper") {
+        collectableColl.add(new collectable(gameObject.x, gameObject.y, gameObject.speed));
+    }
 });
 
 onUpdate(() => {
