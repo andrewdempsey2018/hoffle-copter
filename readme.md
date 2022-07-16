@@ -53,7 +53,7 @@ Long live the Hoff!
 * A user should understand the purpose of the website.
 * A user should be able to active the game.
 * A user should be able to find the controls for the game.
-* A user should be able to control the should effects.
+* A user should be able to control the sound effects.
 
 
 ## Wireframes
@@ -69,6 +69,14 @@ Beach Level (including update)
 
 ## Further Development Notes
 
+#### Project development done on Friday
+* Added clouds to game canvas area
+* Added blimp enemy with code
+* Added cityscape background to level 2 file
+* Found sound effects for project
+
+#### Project development done on Saturday
+* Copper collectible added to project
 ### Bugs Encountered and Resolutions
 
 ## Technologies Used
