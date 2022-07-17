@@ -8,11 +8,10 @@
     },
     {
         "time": "00:02",
-        "object": "cloud",
+        "object": "asteroid",
         "x": 1024,
         "y": 150,
-        "speed": -100,
-        "size": 50
+        "speed": -100
     },
     {
         "time": "00:03",
@@ -31,11 +30,10 @@
     },
     {
         "time": "00:05",
-        "object": "no spawn",
+        "object": "saucer",
         "x": 700,
         "y": 150,
-        "speed": -100,
-        "size": 50
+        "speed": -100
     },
     {
         "time": "00:06",
@@ -47,11 +45,10 @@
     },
     {
         "time": "00:07",
-        "object": "no spawn",
+        "object": "saucer",
         "x": 700,
         "y": 150,
-        "speed": -100,
-        "size": 50
+        "speed": -100
     },
     {
         "time": "00:08",
