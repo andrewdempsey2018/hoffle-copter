@@ -31,6 +31,7 @@ loadSprite("heli", "./assets/sprites/heli.png", {
 loadSprite("titlescreen", "./assets/ui/titlescreen.png");
 loadSprite("introImage", "./assets/ui/introimage.png");
 loadSprite("endingImage", "./assets/ui/endingimage.png");
+loadSprite("levelComplete", "./assets/ui/levelcomplete.png");
 
 /* Initialise collections that will hold game objects */
 let cityScapeColl = new Set();
@@ -143,6 +144,11 @@ scene("gameplay", async (levelName) => {
 
         if (index < LEVEL_TIME_SECONDS) {
             index++;
+
+            // Player has reached the end of the level
+            if(index === 58) {
+                levelCompleteStart();
+            }
         }
 
         gameObject = level[index];
@@ -239,7 +245,12 @@ scene("gameplay", async (levelName) => {
     });
 });
 
+/* Functions that trigger the various game scenes */
 
+const titleScreenStart = () => {
+    go("titleScreen", {
+    })
+}
 
 const level1Start = () => {
     go("gameplay", {
@@ -247,10 +258,46 @@ const level1Start = () => {
     })
 }
 
+const level2Start = () => {
+    go("gameplay", {
+        levelName: 'space',
+    })
+}
+
+const level3Start = () => {
+    go("gameplay", {
+        levelName: 'beach',
+    })
+}
+
+const level4Start = () => {
+    go("gameplay", {
+        levelName: 'boss',
+    })
+}
+
 const introStart = () => {
     go("intro", {
     })
 }
+
+const endingStart = () => {
+    go("ending", {
+    })
+}
+
+const gameOverStart = () => {
+    go("gameOver", {
+    })
+}
+
+const levelCompleteStart = () => {
+    go("levelComplete", {
+    })
+}
+
+/* game scenes. Kaboom will wipe the previous scene from memory
+   and allow us to load a completely new scene using the scene tag attribute */
 
 scene("titleScreen", async () => {
 
@@ -261,6 +308,18 @@ scene("titleScreen", async () => {
 
     onKeyPress("enter", () => {
         introStart();
+    })
+});
+
+scene("levelComplete", async () => {
+
+    const levelCompleteImage = add([
+        sprite("levelComplete"),
+        pos(0, 0),
+    ]);
+
+    onKeyPress("enter", () => {
+        level2Start();
     })
 });
 
@@ -276,9 +335,6 @@ scene("intro", async () => {
     })
 });
 
-const titleScreenStart = () => {
-    go("titleScreen", {
-    })
-}
+/* On first load of the application, run the title screen */
 
 titleScreenStart();
