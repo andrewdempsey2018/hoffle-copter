@@ -179,6 +179,10 @@ scene("gameplay", async ({ levelIdx, score }) => {
             blimp.move();
         });
 
+        boomColl.forEach(boom => {
+            boom.animate();
+        });
+
         bullets.forEach(bullet => {
             bullet.move();
         });

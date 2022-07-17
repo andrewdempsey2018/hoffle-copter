@@ -7,6 +7,7 @@ class boom {
     constructor(xPos, yPos) {
         this.xPos = xPos;
         this.yPos = yPos;
+        this.life = 10;
 
         this.spr = k.add([
             k.sprite("boom"),
@@ -16,8 +17,12 @@ class boom {
         ]);
     }
 
-    location () {
-        this.spr.location(xPos, yPos)
+    animate() {
+        this.life -= 1;
+
+        if (this.life === 0) {
+            this.spr.destroy();
+        }
     }
 }
 
