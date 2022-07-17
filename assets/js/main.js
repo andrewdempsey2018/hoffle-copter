@@ -54,7 +54,7 @@ loadSound("explosion2", "./assets/sfx/explosion2.wav");
 loadSound("coin", "./assets/sfx/coin.wav");
 loadSound("bgmus", "./assets/soundfile/roflcopter-sound.wav");
 
-scene("gameplay", async ({ levelIdx, score }) => {
+scene("gameplay", async (levelName) => {
 
     const heli = add([
         sprite("heli"),
@@ -123,7 +123,7 @@ scene("gameplay", async ({ levelIdx, score }) => {
     If the level file contains information on a game object, we instanciate it
     using the values from the JSON file */
 
-    let level2 = await loadLevel('./assets/levels/testlev.json'); //grab the level from assets folder
+    let level = await loadLevel('./assets/levels/' + levelName['levelName'] + '.json'); //grab the level from assets folder
 
     /* index is the position in the level script where we are at. 
     There is a position for every second of real time that passes.
@@ -142,7 +142,7 @@ scene("gameplay", async ({ levelIdx, score }) => {
             index++;
         }
 
-        gameObject = level2[index];
+        gameObject = level[index];
 
         if (gameObject.object === "blimp") {
             blimpColl.add(new blimp(gameObject.x, gameObject.y, gameObject.xSpeed, gameObject.ySpeed));
@@ -240,8 +240,7 @@ scene("gameplay", async ({ levelIdx, score }) => {
 
 const level1Start = () => {
     go("gameplay", {
-        levelIdx: 0,
-        score: 0,
+        levelName: 'level1',
     })
 }
 
@@ -259,8 +258,6 @@ scene("titleScreen", async ({ levelIdx, score }) => {
 
 const titleScreenStart = () => {
     go("titleScreen", {
-        levelIdx: 0,
-        score: 0,
     })
 }
 
