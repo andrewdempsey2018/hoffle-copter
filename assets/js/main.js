@@ -8,6 +8,7 @@ import collectable from "./collectable.js"
 import loadLevel from "./LoadLevel.js";
 import saucer from "./saucer.js";
 import asteroid from "./asteroid.js";
+import loadLevel from "./loadLevel.js";
 
 loadSprite("heli", "./assets/sprites/heli.png", {
     sliceX: 2,
@@ -98,7 +99,6 @@ onCollide("bullet", "plane", (bullet, plane) => {
 onCollide("heli", "copper", (heli, copper) => {
     play("explosion");
     destroy(copper);
-    destroy;
 });
 
 // City Skyline
@@ -113,7 +113,7 @@ every one second. If the level file contains an entry 'no spawn' we ignore it
 If the level file contains information on a game object, we instanciate it
 using the values from the JSON file */
 
-const level2 = await loadLevel('./assets/levels/level2.json'); //grab the level from assets folder
+let level2 = await loadLevel('./assets/levels/testlev.json'); //grab the level from assets folder
 
 /* index is the position in the level script where we are at. 
 There is a position for every second of real time that passes.
