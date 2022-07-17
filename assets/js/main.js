@@ -8,7 +8,6 @@ import collectable from "./collectable.js"
 import saucer from "./saucer.js";
 import asteroid from "./asteroid.js";
 import loadLevel from "./levelloader.js";
-import explode from "./explode.js";
 import boom from "./explode.js";
 
 loadSprite("heli", "./assets/sprites/heli.png", {
@@ -25,6 +24,8 @@ loadSprite("heli", "./assets/sprites/heli.png", {
         },
     }
 });
+
+
 
 /* static UI elements */
 loadSprite("titlescreen", "./assets/ui/titlescreen.png");
