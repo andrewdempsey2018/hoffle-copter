@@ -123,6 +123,7 @@ JavaScript | HTML | CSS
 * Blimp, Alien, Star, Space background - www.asciiart.eu
 * Sun - www.pinclipart.com
 * UFO - asciiart.website
+* Copper, an ASCII art smiley face - [George Reith](https://codegolf.stackexchange.com/questions/16587/print-a-smiley-face/16857#16857)
 
 ### Sounds
 * Roflcopter 
