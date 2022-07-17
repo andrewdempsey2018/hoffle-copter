@@ -28,6 +28,8 @@ loadSprite("heli", "./assets/sprites/heli.png", {
 
 /* static UI elements */
 loadSprite("titlescreen", "./assets/ui/titlescreen.png");
+loadSprite("introImage", "./assets/ui/introimage.png");
+loadSprite("endingImage", "./assets/ui/endingimage.png");
 
 /* Initialise collections that will hold game objects */
 let cityScapeColl = new Set();
@@ -240,14 +242,31 @@ scene("gameplay", async (levelName) => {
 
 const level1Start = () => {
     go("gameplay", {
-        levelName: 'level1',
+        levelName: 'city',
     })
 }
 
-scene("titleScreen", async ({ levelIdx, score }) => {
+const introStart = () => {
+    go("intro", {
+    })
+}
+
+scene("titleScreen", async () => {
 
     const titleScreenImage = add([
         sprite("titlescreen"),
+        pos(0, 0),
+    ]);
+
+    onKeyPress("enter", () => {
+        introStart();
+    })
+});
+
+scene("intro", async () => {
+
+    const introImage = add([
+        sprite("introImage"),
         pos(0, 0),
     ]);
 
