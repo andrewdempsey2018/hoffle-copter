@@ -85,15 +85,13 @@ Beach Level (including update)
 * Fixed problem with GitHub pages deployment
 * Background sound track and user controls added to project
 * Work started on presentation video
+* Added explosion animation 
 
 ---
 
 ## Deployment
 
 ### GitHub 
-
-### Bugs Encountered and Resolutions
-* GitHub pages json issue
 
 ## Technologies Used
 
@@ -113,6 +111,19 @@ JavaScript | HTML | CSS
 ## Deployment
 ## Testing
 
+### Bugs Encountered and Resolutions
+* GitHub pages json issue
+
+### Automated Testing
+* W3C Validator
+
+* JavaScript Validator
+
+* Lighthouse
+
+### Manual Testing
+* Testing User Stories
+
 ## Code Overview
 
 --
@@ -120,7 +131,7 @@ JavaScript | HTML | CSS
 ## Credits
 
 ### Images
-* Blimp, Alien, Star, Space background - www.asciiart.eu
+* Blimp, Alien, Star, Space background, Explosion - www.asciiart.eu
 * Sun - www.pinclipart.com
 * UFO - asciiart.website
 * Copper, an ASCII art smiley face - [George Reith](https://codegolf.stackexchange.com/questions/16587/print-a-smiley-face/16857#16857)
