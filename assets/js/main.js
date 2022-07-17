@@ -6,6 +6,8 @@ import cityScape from "./cityscape.js"
 import cloud from "./cloud.js"
 import collectable from "./collectable.js"
 import loadLevel from "./LoadLevel.js";
+import saucer from "./saucer.js";
+import asteroid from "./asteroid.js";
 
 loadSprite("heli", "./assets/sprites/heli.png", {
     sliceX: 2,
@@ -27,6 +29,8 @@ let cityScapeColl = new Set();
 let cloudColl = new Set();
 let blimpColl = new Set();
 let planeColl = new Set();
+let saucerColl = new Set();
+let asteroidColl = new Set();
 //collectable game object 
 let collectableColl = new Set();
 
@@ -37,6 +41,7 @@ const HELI_SPEED = 300;
 const heli = add([
     sprite("heli"),
     area(),
+    z(1),
     pos(400, 300),
     "heli"
 ]);
@@ -148,6 +153,14 @@ loop(1, () => {
     if (gameObject.object === "cityScape") {
         cityScapeColl.add(new cityScape(gameObject.x, gameObject.y, gameObject.speed));
     }
+
+    if (gameObject.object === "asteroid") {
+        asteroidColl.add(new asteroid(gameObject.x, gameObject.y, gameObject.speed));
+    }
+
+    if (gameObject.object === "saucer") {
+        saucerColl.add(new saucer(gameObject.x, gameObject.y, gameObject.speed));
+    }
 });
 
 onUpdate(() => {
@@ -180,5 +193,14 @@ onUpdate(() => {
         plane.move();
     });
 
+    // Moving asteroid
+    asteroidColl.forEach(asteroid => {
+        asteroid.move();
+    });
+
+    // Moving saucer
+    saucerColl.forEach(saucer => {
+        saucer.move();
+    });
 });
     
