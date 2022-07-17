@@ -6,6 +6,9 @@ import cityScape from "./cityscape.js"
 import cloud from "./cloud.js"
 import collectable from "./collectable.js"
 import loadLevel from "./LoadLevel.js";
+import saucer from "./saucer.js";
+import asteroid from "./asteroid.js";
+import loadLevel from "./loadLevel.js";
 
 loadSprite("heli", "./assets/sprites/heli.png", {
     sliceX: 2,
@@ -27,6 +30,8 @@ let cityScapeColl = new Set();
 let cloudColl = new Set();
 let blimpColl = new Set();
 let planeColl = new Set();
+let saucerColl = new Set();
+let asteroidColl = new Set();
 //collectable game object 
 let collectableColl = new Set();
 
@@ -37,6 +42,7 @@ const HELI_SPEED = 300;
 const heli = add([
     sprite("heli"),
     area(),
+    z(1),
     pos(400, 300),
     "heli"
 ]);
@@ -93,7 +99,6 @@ onCollide("bullet", "plane", (bullet, plane) => {
 onCollide("heli", "copper", (heli, copper) => {
     play("explosion");
     destroy(copper);
-    destroy;
 });
 
 // City Skyline
@@ -108,7 +113,7 @@ every one second. If the level file contains an entry 'no spawn' we ignore it
 If the level file contains information on a game object, we instanciate it
 using the values from the JSON file */
 
-const level2 = await loadLevel('./assets/levels/level2.json'); //grab the level from assets folder
+let level2 = await loadLevel('./assets/levels/testlev.json'); //grab the level from assets folder
 
 /* index is the position in the level script where we are at. 
 There is a position for every second of real time that passes.
@@ -144,6 +149,18 @@ loop(1, () => {
     if (gameObject.object === "copper") {
         collectableColl.add(new collectable(gameObject.x, gameObject.y, gameObject.speed));
     }
+
+    if (gameObject.object === "cityScape") {
+        cityScapeColl.add(new cityScape(gameObject.x, gameObject.y, gameObject.speed));
+    }
+
+    if (gameObject.object === "asteroid") {
+        asteroidColl.add(new asteroid(gameObject.x, gameObject.y, gameObject.speed));
+    }
+
+    if (gameObject.object === "saucer") {
+        saucerColl.add(new saucer(gameObject.x, gameObject.y, gameObject.speed));
+    }
 });
 
 onUpdate(() => {
@@ -176,5 +193,14 @@ onUpdate(() => {
         plane.move();
     });
 
+    // Moving asteroid
+    asteroidColl.forEach(asteroid => {
+        asteroid.move();
+    });
+
+    // Moving saucer
+    saucerColl.forEach(saucer => {
+        saucer.move();
+    });
 });
     
