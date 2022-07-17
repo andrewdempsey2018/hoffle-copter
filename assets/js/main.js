@@ -7,7 +7,7 @@ import cloud from "./cloud.js"
 import collectable from "./collectable.js"
 import saucer from "./saucer.js";
 import asteroid from "./asteroid.js";
-import loadLevel from "./LoadLevel.js";
+import loadLevel from "./levelloader.js";
 
 loadSprite("heli", "./assets/sprites/heli.png", {
     sliceX: 2,
