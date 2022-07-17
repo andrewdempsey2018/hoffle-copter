@@ -53,9 +53,8 @@ Long live the Hoff!
 * A user should understand the purpose of the website.
 * A user should be able to active the game.
 * A user should be able to find the controls for the game.
-* A user should be able to control the sound effects.
-
-
+* A user should be able to turn the game sound on and off.
+* 
 ## Wireframes
 ### Level Backgrounds
 
