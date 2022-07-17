@@ -5,7 +5,7 @@ import bullet from "./bullet.js"
 import cityScape from "./cityscape.js"
 import cloud from "./cloud.js"
 import collectable from "./collectable.js"
-import loadLevel from "./LoadLevel.js";
+import loadLevel from "./loadLevel.js";
 
 loadSprite("heli", "./assets/sprites/heli.png", {
     sliceX: 2,
@@ -107,7 +107,7 @@ every one second. If the level file contains an entry 'no spawn' we ignore it
 If the level file contains information on a game object, we instanciate it
 using the values from the JSON file */
 
-let level2 = await loadLevel('level2'); //grab the level from assets folder
+let level2 = await loadLevel('testlev'); //grab the level from assets folder
 
 /* index is the position in the level script where we are at. 
 There is a position for every second of real time that passes.
