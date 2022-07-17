@@ -1,6 +1,15 @@
 /* Styling section for Background Scenery */
 
+body {
+    background-image: url(/hoffle-copter/assets/scenery/outer-space.png);
+    background-repeat: repeat;
+}
 
+
+
+
+
+/* 
 #sun-emoji {
     position: absolute;
     right: 55px;
@@ -30,7 +39,7 @@
     position: absolute;
     right: 150px;
     top: 400px;
-}
+} */
 
 /* Drawable element that displays rendered gameplay from Kaboom */
 #game_canvas {
