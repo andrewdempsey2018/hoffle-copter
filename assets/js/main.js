@@ -51,6 +51,9 @@ heli.play("fly");
 /* Load sound effects */
 loadSound("shoot", "./assets/sfx/shoot.wav");
 loadSound("explosion", "./assets/sfx/explosion.wav");
+loadSound("explosion2", "./assets/sfx/explosion2.wav");
+loadSound("coin", "./assets/sfx/coin.wav");
+loadSound("bgmus", "./assets/soundfile/roflcopter-sound.wav");
 
 /* Setup control scheme for player */
 onKeyDown("up", () => {
@@ -90,19 +93,19 @@ keyPress("z", () => {
 /* Collision between bullets and enemys */
 
 onCollide("bullet", "plane", (bullet, plane) => {
-    play("explosion");
+    play("explosion2");
     bullet.destroy();
     plane.destroy();
 });
 
 onCollide("heli", "copper", (heli, copper) => {
-    play("explosion");
+    play("coin");
     destroy(copper);
 });
 
 // City Skyline
 onCollide("bullet", "blimp", (bullet, blimp) => {
-    play("explosion");
+    play("explosion2");
     bullet.destroy();
     blimp.destroy();
 });
@@ -201,5 +204,22 @@ onUpdate(() => {
     saucerColl.forEach(saucer => {
         saucer.move();
     });
+    
+    // Looping background music
+    const music = play("bgmus", {
+        volume: 0.8,
+        loop: true   
+   
+    })
+
+    // User controls for music play pause
+    onKeyPress("space", () => {
+        if (music.isPaused()) {
+            music.play()
+        } else {
+            music.pause()
+            }
+    })
+
 });
     
