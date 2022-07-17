@@ -53,8 +53,8 @@ Long live the Hoff!
 * A user should understand the purpose of the website.
 * A user should be able to active the game.
 * A user should be able to find the controls for the game.
-* A user should be able to control the sound effects.
-
+* A user should be able to control in game sounds. 
+* A user should enjoy the experience of playing the game.
 
 ## Wireframes
 ### Level Backgrounds
@@ -78,8 +78,22 @@ Beach Level (including update)
 #### Project development done on Saturday
 * Copper collectible added to project
 * Sound files created for explosion and collectible impact
+* Sprites and landscapes sourced and animated for space level
+* Added event timer for levels
+
+#### Project development done on Sunday
+* Fixed problem with GitHub pages deployment
+* Background sound track and user controls added to project
+* Work started on presentation video
+
+---
+
+## Deployment
+
+### GitHub 
 
 ### Bugs Encountered and Resolutions
+* GitHub pages json issue
 
 ## Technologies Used
 
@@ -87,13 +101,14 @@ Beach Level (including update)
 JavaScript | HTML | CSS
 
 ### Additional :
-* Kaboom.js 
+* Kaboom.js - main library used for JavaScript functions
 * Git
 * GitHub
 * JS Code
-* Google DevTools
+* Google DevTools - used for testing and development
 * Am I Responsive?
-* Canva
+* Canva - used for creation of Hofflecopter and Lifes a beach slides
+* BFXR - Online tool for sound effect creation of explosion and coin collection tones
 
 ## Deployment
 ## Testing
@@ -108,3 +123,21 @@ JavaScript | HTML | CSS
 * Blimp, Alien, Star, Space background - www.asciiart.eu
 * Sun - www.pinclipart.com
 * UFO - asciiart.website
+
+### Sounds
+* Roflcopter 
+* Sound effects - created by Cheryl
+
+## Team Members
+
+* Andrew
+
+* Cheryl
+
+* Christian
+
+* Ethan
+
+* Lucas
+
+* Panzek 
