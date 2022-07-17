@@ -127,6 +127,20 @@ scene("gameplay", async (levelName) => {
         blimp.destroy();
     });
 
+    onCollide("bullet", "saucer", (bullet, saucer) => {
+        play("explosion2");
+        bullet.destroy();
+        boomColl.add(new boom(saucer.pos.x, saucer.pos.y))
+        saucer.destroy();
+    })
+
+    onCollide("bullet", "asteroid", (bullet, asteroid) => {
+        play("explosion2");
+        bullet.destroy();
+        boomColl.add(new boom(asteroid.pos.x, asteroid.pos.y))
+        asteroid.destroy();
+    })
+
     /* Here we read each entry from the level JSON file
     every one second. If the level file contains an entry 'no spawn' we ignore it
     If the level file contains information on a game object, we instanciate it
