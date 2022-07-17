@@ -209,7 +209,17 @@ onUpdate(() => {
     // Looping background music
     const music = play("bgmus", {
         volume: 0.8,
-        loop: true
+        loop: true   
+   
+    })
+
+    // User controls for music play pause
+    onKeyPress("space", () => {
+        if (music.isPaused()) {
+            music.play()
+        } else {
+            music.pause()
+            }
     })
 
 });
