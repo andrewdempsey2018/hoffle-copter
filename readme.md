@@ -85,6 +85,7 @@ Beach Level (including update)
 * Fixed problem with GitHub pages deployment
 * Background sound track and user controls added to project
 * Work started on presentation video
+* Added explosion animation 
 
 ---
 
