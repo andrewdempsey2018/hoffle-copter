@@ -1,13 +1,14 @@
 import k from "./kaboom.js"
 
 loadSprite("boom", "./assets/sprites/boom.png", {
-    sliceY: 3,
+    sliceX: 3,
     //Animation of explosion
     anims: {
         "xplod": {
             from: 0,
-            to: 3,
-            speed: 1,
+            to: 1,
+            to: 2,
+            speed: 4,
             loop: false
         }
     }
@@ -18,7 +19,7 @@ class boom {
     constructor(xPos, yPos) {
         this.xPos = xPos;
         this.yPos = yPos;
-        this.life = 10;
+        this.life = 50;
 
         this.spr = k.add([
             k.sprite("boom"),
