@@ -9,6 +9,8 @@ import saucer from "./saucer.js";
 import asteroid from "./asteroid.js";
 import loadLevel from "./levelloader.js";
 import boom from "./explode.js";
+import planetScape from "./planet.js"
+import beachScape from "./beach.js"
 
 loadSprite("heli", "./assets/sprites/heli.png", {
     sliceX: 2,
@@ -42,6 +44,8 @@ let saucerColl = new Set();
 let asteroidColl = new Set();
 let collectableColl = new Set();
 let boomColl = new Set();
+let planetScapeColl = new Set();
+let beachScapeColl = new Set();
 
 /* Create players bullet collection and handle
 player controls to allow shooting */
@@ -146,7 +150,7 @@ scene("gameplay", async (levelName) => {
             index++;
 
             // Player has reached the end of the level
-            if(index === 58) {
+            if(index === 58) { 
                 levelCompleteStart();
             }
         }
@@ -180,6 +184,12 @@ scene("gameplay", async (levelName) => {
         if (gameObject.object === "saucer") {
             saucerColl.add(new saucer(gameObject.x, gameObject.y, gameObject.speed));
         }
+        if (gameObject.object === "planetScape") {
+            planetScapeColl.add(new planetScape(gameObject.x, gameObject.y, gameObject.speed));
+        }
+        if (gameObject.object === "beachScape") {
+            beachScapeColl.add(new beachScape(gameObject.x, gameObject.y, gameObject.speed));
+        }
     });
 
     onUpdate(() => {
@@ -199,6 +209,16 @@ scene("gameplay", async (levelName) => {
         // Moving Cityscape 
         cityScapeColl.forEach(cityScape => {
             cityScape.move();
+        });
+
+        // Moving Planetscape 
+        planetScapeColl.forEach(planetScape => {
+            planetScape.move();
+        });
+
+        // Moving Beachscape 
+        beachScapeColl.forEach(beachScape => {
+            beachScape.move();
         });
 
         // Moving Clouds in background
@@ -233,14 +253,14 @@ scene("gameplay", async (levelName) => {
 
         }) */
 
-        // User controls for music play pause
-        onKeyPress("space", () => {
-            if (music.isPaused()) {
-                music.play()
-            } else {
-                music.pause()
-            }
-        })
+        // // User controls for music play pause
+        // onKeyPress("space", () => {
+        //     if (music.isPaused()) {
+        //         music.play()
+        //     } else {
+        //         music.pause()
+        //     }
+        // })
 
     });
 });

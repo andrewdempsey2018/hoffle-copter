@@ -1,8 +1,8 @@
 import k from "./kaboom.js"
 
-loadSprite("planetScape", "./assets/sprites/beach.png");
+loadSprite("beachScape", "./assets/sprites/asciibeach.png");
 
-class planetScape {
+class beachScape {
 
     constructor(xPos, yPos, speed) {
         this.xPos = xPos;
@@ -10,10 +10,10 @@ class planetScape {
         this.speed = speed;
 
         this.spr = k.add([
-            k.sprite("planetScape"),
+            k.sprite("beachScape"),
             k.area(),
             k.pos(this.xPos, this.yPos),
-            "planetScape"
+            "beachScape"
         ]);
     }
 
@@ -23,5 +23,5 @@ class planetScape {
     };
 }
 
-export default planetScape;
+export default beachScape;
 
