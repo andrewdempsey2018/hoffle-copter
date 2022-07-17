@@ -8,6 +8,8 @@ import collectable from "./collectable.js"
 import saucer from "./saucer.js";
 import asteroid from "./asteroid.js";
 import loadLevel from "./levelloader.js";
+import explode from "./explode.js";
+import boom from "./explode.js";
 
 loadSprite("heli", "./assets/sprites/heli.png", {
     sliceX: 2,
@@ -32,6 +34,7 @@ let planeColl = new Set();
 let saucerColl = new Set();
 let asteroidColl = new Set();
 let collectableColl = new Set();
+let boomColl = new Set();
 
 /* Create players bullet collection and handle
 player controls to allow shooting */
@@ -96,6 +99,7 @@ scene("gameplay", async ({ levelIdx, score }) => {
     onCollide("bullet", "plane", (bullet, plane) => {
         play("explosion2");
         bullet.destroy();
+        boomColl.add(new boom(plane.pos.x, plane.pos.y))
         plane.destroy();
     });
 
