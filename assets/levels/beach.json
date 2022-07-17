@@ -1,21 +1,21 @@
 [
     {
         "time": "00:01",
-        "object": "cityScape",
-        "x": 280,
+        "object": "beachScape",
+        "x": 50,
         "y": 450,
         "speed": -100
     },
     {
         "time": "00:02",
-        "object": "asteroid",
-        "x": 1024,
-        "y": 150,
+        "object": "flag",
+        "x": 1000,
+        "y": 350,
         "speed": -100
     },
     {
         "time": "00:03",
-        "object": "cityScape",
+        "object": "no spawn",
         "x": 1000,
         "y": 450,
         "speed": -100
@@ -60,11 +60,10 @@
     },
     {
         "time": "00:09",
-        "object": "no spawn",
-        "x": 700,
-        "y": 150,
-        "speed": -100,
-        "size": 50
+        "object": "beachScape",
+        "x": 1000,
+        "y": 450,
+        "speed": -100
     },
     {
         "time": "00:10",
@@ -75,16 +74,15 @@
         "size": 50
     },
     {
-        "time": "00:11",
+        "time": "00:12",
         "object": "no spawn",
-        "x": 700,
-        "y": 150,
-        "speed": -100,
-        "size": 50
+        "x": 1000,
+        "y": 450,
+        "speed": -100
     },
     {
         "time": "00:12",
-        "object": "cityScape",
+        "object": "no spawn",
         "x": 1000,
         "y": 450,
         "speed": -100
@@ -152,7 +150,7 @@
     },
     {
         "time": "00:21",
-        "object": "cityScape",
+        "object": "no spawn",
         "x": 1000,
         "y": 450,
         "speed": -100
@@ -190,10 +188,10 @@
     },
     {
         "time": "00:26",
-        "object": "plane",
-        "x": 1024,
-        "y": 115,
-        "speed": -250
+        "object": "beachScape",
+        "x": 1000,
+        "y": 450,
+        "speed": -100
     },
     {
         "time": "00:27",
@@ -220,10 +218,11 @@
     },
     {
         "time": "00:30",
-        "object": "cityScape",
-        "x": 1000,
-        "y": 450,
-        "speed": -100
+        "object": "no spawn",
+        "x": 700,
+        "y": 150,
+        "speed": -100,
+        "size": 50
     },
     {
         "time": "00:31",
@@ -288,10 +287,11 @@
     },
     {
         "time": "00:39",
-        "object": "cityScape",
-        "x": 1000,
-        "y": 450,
-        "speed": -100
+        "object": "no spawn",
+        "x": 700,
+        "y": 150,
+        "speed": -100,
+        "size": 50
     },
     {
         "time": "00:40",
@@ -319,11 +319,10 @@
     },
     {
         "time": "00:43",
-        "object": "no spawn",
-        "x": 700,
-        "y": 150,
-        "speed": -100,
-        "size": 50
+        "object": "beachScape",
+        "x": 1000,
+        "y": 450,
+        "speed": -100
     },
     {
         "time": "00:44",
@@ -359,10 +358,11 @@
     },
     {
         "time": "00:48",
-        "object": "cityScape",
-        "x": 1000,
-        "y": 450,
-        "speed": -100
+        "object": "no spawn",
+        "x": 700,
+        "y": 150,
+        "speed": -100,
+        "size": 50
     },
     {
         "time": "00:49",
@@ -374,11 +374,10 @@
     },
     {
         "time": "00:50",
-        "object": "no spawn",
-        "x": 700,
-        "y": 150,
-        "speed": -100,
-        "size": 50
+        "object": "flag",
+        "x": 1000,
+        "y": 350,
+        "speed": -100
     },
     {
         "time": "00:51",
@@ -430,10 +429,11 @@
     },
     {
         "time": "00:57",
-        "object": "cityScape",
-        "x": 1000,
-        "y": 450,
-        "speed": -100
+        "object": "no spawn",
+        "x": 700,
+        "y": 150,
+        "speed": -100,
+        "size": 50
     },
     {
         "time": "00:58",

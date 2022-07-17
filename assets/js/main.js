@@ -11,6 +11,7 @@ import loadLevel from "./levelloader.js";
 import boom from "./explode.js";
 import planetScape from "./planet.js"
 import beachScape from "./beach.js"
+import flag from "./flag.js"
 
 loadSprite("heli", "./assets/sprites/heli.png", {
     sliceX: 2,
@@ -46,6 +47,7 @@ let collectableColl = new Set();
 let boomColl = new Set();
 let planetScapeColl = new Set();
 let beachScapeColl = new Set();
+let flagColl = new Set();
 
 /* Create players bullet collection and handle
 player controls to allow shooting */
@@ -199,11 +201,17 @@ scene("gameplay", async (levelName) => {
         if (gameObject.object === "saucer") {
             saucerColl.add(new saucer(gameObject.x, gameObject.y, gameObject.speed));
         }
+
         if (gameObject.object === "planetScape") {
             planetScapeColl.add(new planetScape(gameObject.x, gameObject.y, gameObject.speed));
         }
+
         if (gameObject.object === "beachScape") {
             beachScapeColl.add(new beachScape(gameObject.x, gameObject.y, gameObject.speed));
+        }
+
+        if (gameObject.object === "flag") {
+            flagColl.add(new flag(gameObject.x, gameObject.y, gameObject.speed));
         }
     });
 
@@ -259,6 +267,11 @@ scene("gameplay", async (levelName) => {
         // Moving saucer
         saucerColl.forEach(saucer => {
             saucer.move();
+        });
+
+        // Moving flag
+        flagColl.forEach(flag => {
+            flag.move();
         });
 
         /* Looping background music
