@@ -54,7 +54,7 @@ loadSound("shoot", "./assets/sfx/shoot.wav");
 loadSound("explosion", "./assets/sfx/explosion.wav");
 loadSound("explosion2", "./assets/sfx/explosion2.wav");
 loadSound("coin", "./assets/sfx/coin.wav");
-loadSound("bgmus", "./assets/soundfile/placeholder.mp3");
+loadSound("bgmus", "./assets/soundfile/roflcopter-sound.wav");
 
 /* Setup control scheme for player */
 onKeyDown("up", () => {
@@ -205,5 +205,12 @@ onUpdate(() => {
     saucerColl.forEach(saucer => {
         saucer.move();
     });
+    
+    // Looping background music
+    const music = play("bgmus", {
+        volume: 0.8,
+        loop: true
+    })
+
 });
     
