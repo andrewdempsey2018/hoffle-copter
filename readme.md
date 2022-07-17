@@ -98,6 +98,8 @@ JavaScript | HTML | CSS
 ## Deployment
 ## Testing
 
+## Code Overview
+
 --
 
 ## Credits
