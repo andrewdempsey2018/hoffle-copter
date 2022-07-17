@@ -5,7 +5,7 @@ import bullet from "./bullet.js"
 import cityScape from "./cityscape.js"
 import cloud from "./cloud.js"
 import collectable from "./collectable.js"
-import loadLevel from "./loadLevel.js";
+import loadLevel from "./LoadLevel.js";
 
 loadSprite("heli", "./assets/sprites/heli.png", {
     sliceX: 2,
