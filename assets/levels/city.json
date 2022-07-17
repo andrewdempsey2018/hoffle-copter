@@ -22,11 +22,10 @@
     },
     {
         "time": "00:04",
-        "object": "cloud",
+        "object": "plane",
         "x": 1024,
-        "y": 250,
-        "speed": -100,
-        "size": 50
+        "y": 15,
+        "speed": -200
     },
     {
         "time": "00:05",
