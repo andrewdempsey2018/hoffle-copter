@@ -24,6 +24,9 @@ loadSprite("heli", "./assets/sprites/heli.png", {
     }
 });
 
+/* static UI elements */
+loadSprite("titlescreen", "./assets/ui/titlescreen.png");
+
 /* Initialise collections that will hold game objects */
 let cityScapeColl = new Set();
 let cloudColl = new Set();
@@ -236,7 +239,12 @@ const level1Start = () => {
 
 scene("titleScreen", async ({ levelIdx, score }) => {
 
-    onKeyPress("space", () => {
+    const titleScreenImage = add([
+        sprite("titlescreen"),
+        pos(0, 0),
+    ]);
+
+    onKeyPress("enter", () => {
         level1Start();
     })
 });
