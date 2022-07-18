@@ -118,6 +118,7 @@ One of our main MVPs was to create multiple varied location for the player to ex
 * Background sound track and user controls added to project
 * Work started on presentation video
 * Added explosion animation 
+* Level selection created
 
 ---
 
@@ -148,7 +149,7 @@ To deploy the application to Github pages:
 4. Select the main branch as your source branch (or, another branch or  your choice if applicable)
 5. Click save
 6. The deployed link will be displayed
-7. Click this link to be redirected to the live site
+7. Click this link to be redirected to the live site [Play Hofflecopter Here](https://andrewdempsey2018.github.io/hoffle-copter/)
 
 &nbsp;<br>
 
@@ -262,7 +263,9 @@ https://www.linkedin.com/in/andrew-dempsey-20ab40180/
 
 ### **Cheryl**
 
-To be completed
+I have really enjoyed my first Hackathon. With thanks to Code Institute, and my fellow 'Hasslehoff Hackers' for making it an enjoyable experience. This has been a great learning journey gaining new skills in Git deployment and project management through GitHub as well as learning some JavaScript and getting into some image editing. 
+
+[LinkedIn](www.linkedin.com/in/ccp84)
 
 &nbsp;<br>
 
