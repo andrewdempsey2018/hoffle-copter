@@ -230,7 +230,9 @@ https://www.linkedin.com/in/andrew-dempsey-20ab40180/
 
 ### **Cheryl**
 
-To be completed
+I have really enjoyed my first Hackathon. With thanks to Code Institute, and my fellow 'Hasslehoff Hackers' for making it an enjoyable experience. This has been a great learning journey gaining new skills in Git deployment and project management through GitHub as well as learning some JavaScript and getting into some image editing. 
+
+[LinkedIn](www.linkedin.com/in/ccp84)
 
 &nbsp;<br>
 
