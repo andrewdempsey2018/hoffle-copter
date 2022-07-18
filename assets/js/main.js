@@ -133,7 +133,9 @@ scene("gameplay", async (levelName) => {
         plane.destroy();
     });
 
-    onCollide("heli", "copper", (copper) => {
+    // check collision between heli and copper
+    
+    onCollide("copper", "heli", (copper) => {
         play("coin");
         destroy(copper);
     });
