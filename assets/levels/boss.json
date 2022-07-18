@@ -8,10 +8,11 @@
     },
     {
         "time": "00:02",
-        "object": "asteroid",
-        "x": 1024,
+        "object": "no spawn",
+        "x": 1000,
         "y": 150,
-        "speed": -100
+        "xSpeed": -350,
+        "ySpeed": 50
     },
     {
         "time": "00:03",
@@ -30,10 +31,11 @@
     },
     {
         "time": "00:05",
-        "object": "saucer",
-        "x": 700,
-        "y": 150,
-        "speed": -100
+        "object": "boss",
+        "x": 1000,
+        "y": 100,
+        "xSpeed": -350,
+        "ySpeed": 50
     },
     {
         "time": "00:06",
@@ -45,10 +47,11 @@
     },
     {
         "time": "00:07",
-        "object": "saucer",
+        "object": "no spawn",
         "x": 700,
         "y": 150,
-        "speed": -100
+        "speed": -100,
+        "size": 50
     },
     {
         "time": "00:08",
@@ -131,24 +134,27 @@
     },
     {
         "time": "00:18",
-        "object": "plane",
-        "x": 1024,
-        "y": 15,
-        "speed": -200
+        "object": "no spawn",
+        "x": 700,
+        "y": 150,
+        "speed": -100,
+        "size": 50
     },
     {
         "time": "00:19",
-        "object": "copper",
+        "object": "no spawn",
         "x": 700,
         "y": 150,
-        "speed": -50
+        "speed": -100,
+        "size": 50
     },
     {
         "time": "00:20",
-        "object": "plane",
-        "x": 1024,
-        "y": 15,
-        "speed": -200
+        "object": "no spawn",
+        "x": 700,
+        "y": 150,
+        "speed": -100,
+        "size": 50
     },
     {
         "time": "00:21",
@@ -175,10 +181,11 @@
     },
     {
         "time": "00:24",
-        "object": "plane",
-        "x": 1024,
-        "y": 115,
-        "speed": -250
+        "object": "no spawn",
+        "x": 700,
+        "y": 150,
+        "speed": -100,
+        "size": 50
     },
     {
         "time": "00:25",
@@ -190,10 +197,11 @@
     },
     {
         "time": "00:26",
-        "object": "plane",
-        "x": 1024,
-        "y": 115,
-        "speed": -250
+        "object": "no spawn",
+        "x": 700,
+        "y": 150,
+        "speed": -100,
+        "size": 50
     },
     {
         "time": "00:27",
@@ -205,10 +213,11 @@
     },
     {
         "time": "00:28",
-        "object": "plane",
-        "x": 1024,
-        "y": 115,
-        "speed": -250
+        "object": "no spawn",
+        "x": 700,
+        "y": 150,
+        "speed": -100,
+        "size": 50
     },
     {
         "time": "00:29",
@@ -227,24 +236,27 @@
     },
     {
         "time": "00:31",
-        "object": "plane",
-        "x": 1024,
-        "y": 315,
-        "speed": -250
+        "object": "no spawn",
+        "x": 700,
+        "y": 150,
+        "speed": -100,
+        "size": 50
     },
     {
         "time": "00:32",
-        "object": "plane",
-        "x": 1024,
-        "y": 215,
-        "speed": -250
+        "object": "no spawn",
+        "x": 700,
+        "y": 150,
+        "speed": -100,
+        "size": 50
     },
     {
         "time": "00:33",
-        "object": "plane",
-        "x": 1024,
-        "y": 115,
-        "speed": -250
+        "object": "no spawn",
+        "x": 700,
+        "y": 150,
+        "speed": -100,
+        "size": 50
     },
     {
         "time": "00:34",
@@ -256,11 +268,11 @@
     },
     {
         "time": "00:35",
-        "object": "blimp",
-        "x": 900,
+        "object": "no spawn",
+        "x": 700,
         "y": 150,
-        "xSpeed": -100,
-        "ySpeed": 50
+        "speed": -100,
+        "size": 50
     },
     {
         "time": "00:36",
@@ -272,11 +284,11 @@
     },
     {
         "time": "00:37",
-        "object": "blimp",
+        "object": "no spawn",
         "x": 700,
         "y": 150,
-        "xSpeed": -100,
-        "ySpeed": 50
+        "speed": -100,
+        "size": 50
     },
     {
         "time": "00:38",
