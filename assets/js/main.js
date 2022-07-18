@@ -13,6 +13,7 @@ import planetScape from "./planet.js"
 import beachScape from "./beach.js"
 import flag from "./flag.js"
 import bird from "./bird.js"
+import boss from "./boss.js"
 
 loadSprite("heli", "./assets/sprites/heli.png", {
     sliceX: 2,
@@ -66,6 +67,7 @@ let planetScapeColl = new Set();
 let beachScapeColl = new Set();
 let flagColl = new Set();
 let birdColl = new Set();
+let bossColl = new Set();
 
 /* Create players bullet collection and handle
 player controls to allow shooting */
@@ -173,6 +175,17 @@ scene("gameplay", async (levelName) => {
         boomColl.add(new boom(bird.pos.x, bird.pos.y))
         bird.destroy();
         score += 25;
+    })
+
+    onCollide("bullet", "boss", (bullet, boss) => {
+        bullet.destroy();
+        boss.hurt(1)
+        boss.on('death', () => {
+            play("explosion2");
+            boomColl.add(new boom(boss.pos.x, boss.pos.y))
+            destroy(boss)
+            endingStart()
+        })
     })
 
     /* Here we read each entry from the level JSON file
@@ -291,6 +304,10 @@ scene("gameplay", async (levelName) => {
         if (gameObject.object === "bird") {
             birdColl.add(new bird(gameObject.x, gameObject.y, gameObject.xSpeed, gameObject.ySpeed));
         }
+
+        if (gameObject.object === "boss") {
+            bossColl.add(new boss(gameObject.x, gameObject.y, gameObject.xSpeed, gameObject.ySpeed));
+        }
     });
 
     onUpdate(() => {
@@ -364,6 +381,11 @@ scene("gameplay", async (levelName) => {
         // Moving bird
         birdColl.forEach(bird => {
             bird.move();
+        });
+
+        // Moving boss
+        bossColl.forEach(boss => {
+            boss.move();
         });
 
         /* Looping background music
