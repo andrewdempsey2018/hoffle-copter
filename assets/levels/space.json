@@ -13,9 +13,10 @@
 },
 {
     "time": "00:03",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "asteroid",
+    "x": 1024,
+    "y": 150,
+    "speed": -100
 },
 {
     "time": "00:04",
@@ -25,9 +26,10 @@
 },
 {
     "time": "00:05",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 250,
+    "speed": -100
 },
 {
     "time": "00:06",
@@ -38,15 +40,17 @@
 },
 {
     "time": "00:07",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 450,
+    "speed": -100
 },
 {
     "time": "00:08",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 350,
+    "speed": -100
 },
 {
     "time": "00:09",
@@ -56,9 +60,10 @@
 },
 {
     "time": "00:10",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 300,
+    "speed": -100
 },
 {
     "time": "00:11",
@@ -69,15 +74,17 @@
 },
 {
     "time": "00:12",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 130,
+    "speed": -100
 },
 {
     "time": "00:13",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 350,
+    "speed": -100
 },
 {
     "time": "00:14",
@@ -87,15 +94,17 @@
 },
 {
     "time": "00:15",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "asteroid",
+    "x": 1024,
+    "y": 150,
+    "speed": -100
 },
 {
     "time": "00:16",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 500,
+    "speed": -100
 },
 {
     "time": "00:17",
@@ -111,9 +120,10 @@
 },
 {
     "time": "00:19",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "asteroid",
+    "x": 1024,
+    "y": 150,
+    "speed": -100
 },
 {
     "time": "00:20",
@@ -123,21 +133,24 @@
 },
 {
     "time": "00:21",
-    "object": "no spawn",
+    "object": "saucer",
     "x": 700,
-    "y": 150
+    "y": 100,
+    "speed": -100
 },
 {
     "time": "00:22",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 350,
+    "speed": -100
 },
 {
     "time": "00:23",
-    "object": "no spawn",
+    "object": "saucer",
     "x": 700,
-    "y": 150
+    "y": 160,
+    "speed": -100
 },
 {
     "time": "00:24",
@@ -147,9 +160,10 @@
 },
 {
     "time": "00:25",
-    "object": "no spawn",
+    "object": "copper",
     "x": 700,
-    "y": 150
+    "y": 150,
+    "speed": -50
 },
 {
     "time": "00:26",
@@ -172,21 +186,24 @@
 },
 {
     "time": "00:29",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "asteroid",
+    "x": 1024,
+    "y": 150,
+    "speed": -100
 },
 {
     "time": "00:30",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 250,
+    "speed": -100
 },
 {
     "time": "00:31",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 400,
+    "speed": -100
 },
 {
     "time": "00:32",
@@ -202,9 +219,10 @@
 },
 {
     "time": "00:34",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 190,
+    "speed": -100
 },
 {
     "time": "00:35",
@@ -214,9 +232,10 @@
 },
 {
     "time": "00:36",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 215,
+    "speed": -100
 },
 {
     "time": "00:37",
@@ -226,9 +245,10 @@
 },
 {
     "time": "00:38",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 430,
+    "speed": -100
 },
 {
     "time": "00:39",
@@ -238,9 +258,10 @@
 },
 {
     "time": "00:40",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 170,
+    "speed": -100
 },
 {
     "time": "00:41",
@@ -257,15 +278,17 @@
 },
 {
     "time": "00:43",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 290,
+    "speed": -100
 },
 {
     "time": "00:44",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 190,
+    "speed": -100
 },
 {
     "time": "00:45",
@@ -281,33 +304,38 @@
 },
 {
     "time": "00:47",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 250,
+    "speed": -100
 },
 {
     "time": "00:48",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 500,
+    "speed": -100
 },
 {
     "time": "00:49",
-    "object": "no spawn",
+    "object": "copper",
     "x": 700,
-    "y": 150
+    "y": 150,
+    "speed": -50
 },
 {
     "time": "00:50",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 360,
+    "speed": -100
 },
 {
     "time": "00:51",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "asteroid",
+    "x": 1024,
+    "y": 150,
+    "speed": -100
 },
 {
     "time": "00:52",
@@ -317,15 +345,17 @@
 },
 {
     "time": "00:53",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 315,
+    "speed": -100
 },
 {
     "time": "00:54",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 210,
+    "speed": -100
 },
 {
     "time": "00:55",
@@ -335,15 +365,17 @@
 },
 {
     "time": "00:56",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "asteroid",
+    "x": 1024,
+    "y": 150,
+    "speed": -100
 },
 {
     "time": "00:57",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "saucer",
+    "x": 1024,
+    "y": 110,
+    "speed": -100
 },
 {
     "time": "00:58",
