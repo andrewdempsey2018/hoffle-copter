@@ -35,6 +35,7 @@ loadSprite("heli", "./assets/sprites/heli.png", {
 loadSprite("titlescreen", "./assets/ui/titlescreen.png");
 loadSprite("introImage", "./assets/ui/introimage.png");
 loadSprite("endingImage", "./assets/ui/endingimage.png");
+loadSprite("gameoverimage", "./assets/ui/gameoverimage.png");
 loadSprite("levelComplete", "./assets/ui/levelcomplete.png");
 loadSprite("starrySky", "./assets/scenery/starry-sky.png");
 
@@ -184,7 +185,7 @@ scene("gameplay", async (levelName) => {
             index++;
 
             // Player has reached the end of the level
-            if (index === 58) {
+            if (index === 3) {
                 levelCompleteStart(levelName['levelName']);
             }
         }
@@ -385,14 +386,36 @@ scene("titleScreen", async () => {
     })
 });
 
+scene("ending", async () => {
+
+    const endingScreen = add([
+        sprite("endingImage"),
+        pos(0, 0),
+    ]);
+
+    onKeyPress("enter", () => {
+        titleScreenStart();
+    })
+});
+
+scene("gameOver", async () => {
+
+    const gameOverScreen = add([
+        sprite("gameoverimage"),
+        pos(0, 0),
+    ]);
+
+    onKeyPress("enter", () => {
+        titleScreenStart();
+    })
+});
+
 scene("levelComplete", async (currentLevel) => {
 
     const levelCompleteImage = add([
         sprite("levelComplete"),
         pos(0, 0),
     ]);
-
-    console.log(currentLevel);
 
     onKeyPress("enter", () => {
 
@@ -402,6 +425,14 @@ scene("levelComplete", async (currentLevel) => {
 
         if (currentLevel === 'space') {
             level3Start();
+        }
+
+        if (currentLevel === 'beach') {
+            level4Start();
+        }
+
+        if (currentLevel === 'boss') {
+            endingStart();
         }
     })
 });
