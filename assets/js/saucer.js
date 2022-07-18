@@ -17,7 +17,8 @@ class saucer {
             k.rotate(this.angle),
             k.origin('center'),
             k.pos(this.xPos, this.yPos),
-            "saucer"
+            "saucer",
+            "enemy"
         ]);
     }
 

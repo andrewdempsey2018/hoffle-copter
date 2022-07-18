@@ -13,7 +13,8 @@ class plane {
             k.sprite("plane"),
             k.area(),
             k.pos(this.xPos, this.yPos),
-            "plane"
+            "plane",
+            "enemy"
         ]);
     }
 
