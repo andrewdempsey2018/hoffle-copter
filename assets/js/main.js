@@ -14,6 +14,7 @@ import beachScape from "./beach.js"
 import flag from "./flag.js"
 import bird from "./bird.js"
 import boss from "./boss.js"
+import bossbullet from "./bossbullet.js"
 
 loadSprite("heli", "./assets/sprites/heli.png", {
     sliceX: 2,
@@ -68,6 +69,7 @@ let beachScapeColl = new Set();
 let flagColl = new Set();
 let birdColl = new Set();
 let bossColl = new Set();
+let bossbulletColl = new Set();
 
 /* Create players bullet collection and handle
 player controls to allow shooting */
@@ -145,6 +147,7 @@ scene("gameplay", async (levelName) => {
         play("explosion2");
         destroy(enemy);
         health -= 1;
+        boomColl.add(new boom(enemy.pos.x, enemy.pos.y))
     });
 
     // check collision between heli and copper
@@ -161,6 +164,7 @@ scene("gameplay", async (levelName) => {
         play("explosion2");
         bullet.destroy();
         blimp.destroy();
+        score += 200;
     });
 
     onCollide("bullet", "saucer", (bullet, saucer) => {
@@ -176,6 +180,7 @@ scene("gameplay", async (levelName) => {
         bullet.destroy();
         boomColl.add(new boom(asteroid.pos.x, asteroid.pos.y))
         asteroid.destroy();
+        score += 25;
     })
 
     onCollide("bullet", "bird", (bullet, bird) => {
@@ -404,6 +409,17 @@ scene("gameplay", async (levelName) => {
         // Moving boss
         bossColl.forEach(boss => {
             boss.move();
+            boss.shoot += 1;
+            if (boss.shoot >= 200) {
+                bossbulletColl.add(new bossbullet(boss.spr.screenPos().x - 10, boss.spr.screenPos().y + 200, -700));
+                play("shoot");
+                boss.shoot = 0;
+            }
+        });
+
+        // Moving bossbullet
+        bossbulletColl.forEach(bossbullet => {
+            bossbullet.move();
         });
 
         /* Looping background music
@@ -444,7 +460,7 @@ const titleScreenStart = () => {
 
 const level1Start = () => {
     go("gameplay", {
-        levelName: 'city',
+        levelName: 'boss', // DEBUG
     })
 }
 
