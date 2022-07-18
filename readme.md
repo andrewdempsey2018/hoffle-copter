@@ -1,4 +1,19 @@
 # Hofflecopter
+
+&nbsp;<br>
+
+![screenshot](/assets/readme/introsection.png)
+
+&nbsp;<br>
+
+## Introduction
+
+&nbsp;<br>
+
+In order to celebrate World Emoji day, our team decided to explore the roots of the emoji phenomenon. We wanted to celebrate a time when emoji were simple ascii characters :-) This gave us the opportunity to tackle the challenge of creating a great looking application using a highly limited colour palette - black and white. The limitations we set upon ourselves led us to create a retro arcade game using an emoji theme. At some stage during out early team meetings, we discovered that David Hasslehoff better known as 'The Hoff' was born on World Emoji day, 17th of July. This fact led us to create a story based around the actor that suited our theme perfectly!! Our game features multiple levels, story cutscenes, scoring, a wide variety of enemies and a retro soundtrack!
+
+&nbsp;<br>
+
 ## Concept
 A "retro emoji" shooter game. Get the bad guys. Save The Hoff.
 [Play Hofflecopter Here](https://andrewdempsey2018.github.io/hoffle-copter/)
@@ -56,15 +71,32 @@ Long live the Hoff!
 * A user should be able to control in game sounds. 
 * A user should enjoy the experience of playing the game.
 
+&nbsp;<br>
+
 ## Wireframes
+
+&nbsp;<br>
+
 ### Level Backgrounds
 
-Space Level
+&nbsp;<br>
+
+One of our main MVPs was to create multiple varied location for the player to explore. We created wireframes of the various locations using a simple paint program. This gave us a good feel for what themes would work and what would not. In the end we decided to restrict ourselves to three levels - Beach (to go with our David Hasslehoff theme), City and Space.
+
+&nbsp;<br>
+
+**Space Level**
+&nbsp;<br>
 ![Image of space level](./assets/readme/space_level.png)
-City Level
+&nbsp;<br>
+**City Level**
+&nbsp;<br>
 ![Image of city level](./assets/readme/city_level.png)
-Beach Level (including update)
+&nbsp;<br>
+**Beach Level (including update)**
+&nbsp;<br>
 ![Image of beach level](./assets/readme/beach_level.png)
+&nbsp;<br>
 ![Image of beach level](./assets/readme/beach_update.png)
 
 ## Further Development Notes
@@ -147,6 +179,7 @@ We used a strict Git workflow throughout the Hackathon. Members created forks of
 * Am I Responsive?
 * Canva - used for creation of Hofflecopter and Lifes a beach slides
 * BFXR - Online tool for sound effect creation of explosion and coin collection tones
+* Paint.net
 
 ## Testing
 
