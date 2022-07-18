@@ -149,6 +149,13 @@ scene("gameplay", async (levelName) => {
         health -= 1;
     });
 
+    /* player collides with a boss bullet, hurt player, destroy destroy bullet */
+    onCollide("bossbullet", "heli", (bossbullet) => {
+        play("explosion2");
+        destroy(bossbullet);
+        health -= 1;
+    });
+
     // check collision between heli and copper
     
     onCollide("copper", "heli", (copper) => {
@@ -457,7 +464,7 @@ const titleScreenStart = () => {
 
 const level1Start = () => {
     go("gameplay", {
-        levelName: 'boss', // DEBUG
+        levelName: 'city',
     })
 }
 
