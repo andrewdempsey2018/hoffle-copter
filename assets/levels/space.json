@@ -1,7 +1,7 @@
 [{
     "time": "00:01",
     "object": "planetScape",
-    "x": 1024,
+    "x": 0,
     "y": 560,
     "speed": -100
 },
@@ -31,9 +31,10 @@
 },
 {
     "time": "00:06",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "planetScape",
+    "x": 0,
+    "y": 560,
+    "speed": -100
 },
 {
     "time": "00:07",
@@ -61,9 +62,10 @@
 },
 {
     "time": "00:11",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "planetScape",
+    "x": 1024,
+    "y": 560,
+    "speed": -100
 },
 {
     "time": "00:12",
@@ -97,10 +99,9 @@
 },
 {
     "time": "00:17",
-    "object": "planetScape",
-    "x": 1024,
-    "y": 560,
-    "speed": -100
+    "object": "no spawn",
+    "x": 700,
+    "y": 150
 },
 {
     "time": "00:18",
@@ -152,9 +153,10 @@
 },
 {
     "time": "00:26",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "planetScape",
+    "x": 1024,
+    "y": 560,
+    "speed": -100
 },
 {
     "time": "00:27",
@@ -212,10 +214,9 @@
 },
 {
     "time": "00:36",
-    "object": "planetScape",
-    "x": 1024,
-    "y": 560,
-    "speed": -100
+    "object": "no spawn",
+    "x": 700,
+    "y": 150
 },
 {
     "time": "00:37",
@@ -249,9 +250,10 @@
 },
 {
     "time": "00:42",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "planetScape",
+    "x": 1024,
+    "y": 560,
+    "speed": -100
 },
 {
     "time": "00:43",
@@ -339,10 +341,9 @@
 },
 {
     "time": "00:57",
-    "object": "planetScape",
-    "x": 1024,
-    "y": 560,
-    "speed": -100
+    "object": "no spawn",
+    "x": 700,
+    "y": 150
 },
 {
     "time": "00:58",
@@ -358,9 +359,10 @@
 },
 {
     "time": "00:60",
-    "object": "no spawn",
-    "x": 700,
-    "y": 150
+    "object": "planetScape",
+    "x": 1024,
+    "y": 560,
+    "speed": -100
 }
 
 ]
