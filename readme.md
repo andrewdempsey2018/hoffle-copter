@@ -123,6 +123,10 @@ One of our main MVPs was to create multiple varied location for the player to ex
 * Loading screen with user instructions included in project
 
 #### Project development done on Monday
+* Improved explosion animation
+* Fixed copper eating heli bug
+* Added static backgrounds for all levels
+* Added favicon
 
 ---
 
@@ -210,7 +214,7 @@ We used a strict Git workflow throughout the Hackathon. Members created forks of
 |Activate the game |       |
 |Find the controls for the game |       |
 |Control in game sounds |       |
-|Enjoy the experience of playing the game |
+|Enjoy the experience of playing the game | So HOFL very COPTER much WOW |
 
 ## Code Overview
 &nbsp;<br>
@@ -277,11 +281,12 @@ this.life -= 1;
 ## Credits
 
 ### Images
-* Blimp, Alien, Star, Space background, Explosion - www.asciiart.eu
+* Blimp, Alien, Star, Space background, Explosion, Bird - www.asciiart.eu
 * Sun - www.pinclipart.com
 * UFO - asciiart.website
 * Copper, an ASCII art smiley face - [George Reith](https://codegolf.stackexchange.com/questions/16587/print-a-smiley-face/16857#16857)
 * Flag - emojicombos.com
+* Dragon - [ASCII Art](https://asciiart.cc/view/12177)
 
 ### Sounds
 * Roflcopter 
@@ -322,12 +327,16 @@ To be completed
 
 ### **Lucas**
 
-To be completed
+I've had the pleasure of working with a great group of teammates during this hackathon. I have learned more about agile methodology and JavaScript than I ever could imagine going into the event. With great teamwork comes great things! Thank you so much to the ‘Hasslehoff Hackers’ team for making this experience one to remember!
+
+[LinkedIn]( https://www.linkedin.com/in/lucas-behrendt)
 
 &nbsp;<br>
 
-### **Panzek**
+### **Peter**
 
-To be completed 
+My second Hackathon with Code Institute. Great experience, a second time. Had great fun! Worked with such an exciting team. Together, we built what is quite an exciting game project - Hoffle Copter! Learnt new things along the way! Feeling like a pro already! Thanks to Code Institute for this experience. Thanks to Hoffle Copter team for being awesome - up the Hoff! I want to do this again!
+
+[lindedIn](https://www.linkedin.com/in/panzek/)
 
 
