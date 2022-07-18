@@ -30,7 +30,8 @@ class blimp {
             k.sprite("blimp"),
             k.area(),
             k.pos(this.xPos, this.yPos),
-            "blimp"
+            "blimp",
+            "enemy"
         ]);
 
         this.spr.play("float")

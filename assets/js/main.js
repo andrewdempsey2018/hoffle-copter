@@ -13,6 +13,7 @@ import planetScape from "./planet.js"
 import beachScape from "./beach.js"
 import flag from "./flag.js"
 import bird from "./bird.js"
+import boss from "./boss.js"
 
 loadSprite("heli", "./assets/sprites/heli.png", {
     sliceX: 2,
@@ -66,10 +67,15 @@ let planetScapeColl = new Set();
 let beachScapeColl = new Set();
 let flagColl = new Set();
 let birdColl = new Set();
+let bossColl = new Set();
 
 /* Create players bullet collection and handle
 player controls to allow shooting */
 let bullets = new Set();
+
+/* keep tract of players points */
+let score = 0;
+let health = 5;
 
 /* Sprite assets loaded here */
 
@@ -131,6 +137,14 @@ scene("gameplay", async (levelName) => {
         bullet.destroy();
         boomColl.add(new boom(plane.pos.x, plane.pos.y))
         plane.destroy();
+        score += 100;
+    });
+
+    /* player collides with an enemy object, hurt player, destroy enemy */
+    onCollide("enemy", "heli", (enemy) => {
+        play("explosion2");
+        destroy(enemy);
+        health -= 1;
     });
 
     // check collision between heli and copper
@@ -138,6 +152,8 @@ scene("gameplay", async (levelName) => {
     onCollide("copper", "heli", (copper) => {
         play("coin");
         destroy(copper);
+        score += 1000;
+        health += 1;
     });
 
     // City Skyline
@@ -152,6 +168,7 @@ scene("gameplay", async (levelName) => {
         bullet.destroy();
         boomColl.add(new boom(saucer.pos.x, saucer.pos.y))
         saucer.destroy();
+        score += 25;
     })
 
     onCollide("bullet", "asteroid", (bullet, asteroid) => {
@@ -166,6 +183,18 @@ scene("gameplay", async (levelName) => {
         bullet.destroy();
         boomColl.add(new boom(bird.pos.x, bird.pos.y))
         bird.destroy();
+        score += 25;
+    })
+
+    onCollide("bullet", "boss", (bullet, boss) => {
+        bullet.destroy();
+        boss.hurt(1)
+        boss.on('death', () => {
+            play("explosion2");
+            boomColl.add(new boom(boss.pos.x, boss.pos.y))
+            destroy(boss)
+            endingStart()
+        })
     })
 
     /* Here we read each entry from the level JSON file
@@ -284,9 +313,31 @@ scene("gameplay", async (levelName) => {
         if (gameObject.object === "bird") {
             birdColl.add(new bird(gameObject.x, gameObject.y, gameObject.xSpeed, gameObject.ySpeed));
         }
+
+        if (gameObject.object === "boss") {
+            bossColl.add(new boss(gameObject.x, gameObject.y, gameObject.xSpeed, gameObject.ySpeed));
+        }
     });
 
     onUpdate(() => {
+
+        /* Draw players score */
+        drawText({
+            text: "score: " + score,
+            size: 30,
+            font: "sink",
+            pos: vec2(300, 10),
+            color: rgb(0, 0, 0),
+        })
+
+        /* Draw players health */
+        drawText({
+            text: "health: " + health,
+            size: 30,
+            font: "sink",
+            pos: vec2(300, 50),
+            color: rgb(0, 0, 0),
+        })
 
         blimpColl.forEach(blimp => {
             blimp.move();
@@ -350,6 +401,11 @@ scene("gameplay", async (levelName) => {
             bird.move();
         });
 
+        // Moving boss
+        bossColl.forEach(boss => {
+            boss.move();
+        });
+
         /* Looping background music
         const music = play("bgmus", {
             volume: 0.8,
@@ -366,12 +422,22 @@ scene("gameplay", async (levelName) => {
         //     }
         // })
 
+        /* health reaches zero, send player to gameover screen */
+        // Player has reached the end of the level DEBUG=3
+        if (health === 0) {
+            music.stop();
+            gameOverStart();
+        }
     });
 });
 
 /* Functions that trigger the various game scenes */
 
 const titleScreenStart = () => {
+
+    score = 0;
+    health = 5;
+
     go("titleScreen", {
     })
 }
@@ -460,6 +526,11 @@ scene("gameOver", async () => {
         sprite("gameoverimage"),
         pos(0, 0),
     ]);
+
+    music = play("gameoverMusic", {
+        volume: 0.50,
+        loop: false
+    })
 
     onKeyPress("enter", () => {
         music.stop();

@@ -10,7 +10,7 @@
 
 &nbsp;
 
-In order to celebrate World Emoji day, our team decided to explore the roots of the emoji phenomenon. We wanted to celebrate a time when emoji were simple ascii characters :-) This gave us the opportunity to tackle the challenge of creating a great looking application using a highly limited colour palette - black and white. The limitations we set upon ourselves led us to create a retro arcade game using an emoji theme. At some stage during out early team meetings, we discovered that David Hasslehoff better known as 'The Hoff' was born on World Emoji day, 17th of July. This fact led us to create a story based around the actor that suited our theme perfectly!! Our game features multiple levels, story cutscenes, scoring, a wide variety of enemies and a retro soundtrack!
+In order to celebrate World Emoji day, our team decided to explore the roots of the emoji phenomenon. We wanted to celebrate a time when emojis were simple ascii characters :-) This gave us the opportunity to tackle the challenge of creating a great looking application using a highly limited colour palette - black and white. The limitations we set upon ourselves led us to create a retro arcade game using an emoji theme. At some stage during out early team meetings, we discovered that David Hasslehoff better known as 'The Hoff' was born on World Emoji day, 17th of July. This fact led us to create a story based around the actor that suited our theme perfectly!! Our game features multiple levels, story cutscenes, scoring, a wide variety of enemies and a retro soundtrack!
 
 &nbsp;
 
@@ -75,7 +75,7 @@ Long live the Hoff!
 
 * A user should be able to load the main game.
 * A user should understand the purpose of the website.
-* A user should be able to active the game.
+* A user should be able to activate the game.
 * A user should be able to find the controls for the game.
 * A user should be able to control in game sounds.
 * A user should enjoy the experience of playing the game.
@@ -135,6 +135,11 @@ One of our main MVPs was to create multiple varied location for the player to ex
 * Loading screen with user instructions included in project
 
 #### Project development done on Monday
+
+* Improved explosion animation
+* Fixed copper eating heli bug
+* Added static backgrounds for all levels
+* Added favicon
 
 ---
 
@@ -219,6 +224,15 @@ We used a strict Git workflow throughout the Hackathon. Members created forks of
 
 * Testing User Stories
 
+| A user should be able to | Proof |
+|----------------------- |------ |
+|Load the main game |The website loads when the deployed link is followed|
+|Understand the purpose of the website |A clear loading screen is included before the game starts. With more time additional HTML functionality could be added to build more of a website around the game to add to the story of Hoffle-copter|
+|Activate the game |The loading screen of the game instructs the user to click here and press enter which activates the game|
+|Find the controls for the game ||
+|Control in game sounds ||
+|Enjoy the experience of playing the game | So HOFL very COPTER much WOW |
+
 ## Code Overview
 
 &nbsp;
@@ -285,11 +299,20 @@ this.life -= 1;
 
 ### Images
 
+<<<<<<< HEAD
+
 * Blimp, Alien, Star, Space background, Explosion - www.asciiart.eu
+=======
+
+* Blimp, Alien, Star, Space background, Explosion, Bird - www.asciiart.eu
+
+>>>>>>> c460ec89f1be6e33e2f92e193e70a02abe35e17e
+
 * Sun - www.pinclipart.com
 * UFO - asciiart.website
 * Copper, an ASCII art smiley face - [George Reith](https://codegolf.stackexchange.com/questions/16587/print-a-smiley-face/16857#16857)
 * Flag - emojicombos.com
+* Dragon - [ASCII Art](https://asciiart.cc/view/12177)
 
 ### Sounds
 
@@ -303,7 +326,7 @@ this.life -= 1;
 
 ### **Andrew**
 
-Thank you to Code Institute for giving me this oppertunity to participate in the July 2022 Hackathon celebrating World Emoji Day! Thanks especially to my fellow 'Hasslehoff Hackers' team mates - we had great fun working together and the experience gave me a wonderful oppertunity to gain experience in the agile process as well as honing my Javascript skills.
+Thank you to Code Institute for giving me this opportunity to participate in the July 2022 Hackathon celebrating World Emoji Day! Thanks especially to my fellow 'Hasslehoff Hackers' team mates - we had great fun working together and the experience gave me a wonderful oppertunity to gain experience in the agile process as well as honing my Javascript skills.
 
 [LinkedIn](https://www.linkedin.com/in/andrew-dempsey-20ab40180/)
 
@@ -319,7 +342,9 @@ I have really enjoyed my first Hackathon. With thanks to Code Institute, and my 
 
 ### **Christian**
 
-To be completed
+This was my first Hackathon, and what a team to work with from the get-go! The work that C.I put in behind the scenes to organise this can't go unappreciated, so a big thanks to the C.I team! As a novice coder entering my first Hackathon, I've had nothing but amazing encouragement and support from the 'Hasslehoff Hackers' and want to say I'm so grateful to work with such an amazing group! I'm really proud of the concept and work that has gone into it. This project has furthered my understanding of my current level of JS, GIT and using a new (to me) IDE - VSCode. Well done guys and thanks for the experience!!
+
+[LinkedIn](https://www.linkedin.com/in/christian-brown-ba7741171/)
 
 &nbsp;
 
@@ -331,7 +356,9 @@ To be completed
 
 ### **Lucas**
 
-To be completed
+I've had the pleasure of working with a great group of teammates during this hackathon. I have learned more about agile methodology and JavaScript than I ever could imagine going into the event. With great teamwork comes great things! Thank you so much to the ‘Hasslehoff Hackers’ team for making this experience one to remember!
+
+[LinkedIn](https://www.linkedin.com/in/lucas-behrendt)
 
 &nbsp;
 
