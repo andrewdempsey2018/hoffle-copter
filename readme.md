@@ -209,11 +209,11 @@ We used a strict Git workflow throughout the Hackathon. Members created forks of
 
 | A user should be able to | Proof |
 |----------------------- |------ |
-|Load the main game |       |
-|Understand the purpose of the website |       |
-|Activate the game |       |
-|Find the controls for the game |       |
-|Control in game sounds |       |
+|Load the main game |The website loads when the deployed link is followed|
+|Understand the purpose of the website |A clear loading screen is included before the game starts. With more time additional HTML functionality could be added to build more of a website around the game to add to the story of Hoffle-copter|
+|Activate the game |The loading screen of the game instructs the user to click here and press enter which activates the game|
+|Find the controls for the game ||
+|Control in game sounds ||
 |Enjoy the experience of playing the game | So HOFL very COPTER much WOW |
 
 ## Code Overview
@@ -334,17 +334,10 @@ I've had the pleasure of working with a great group of teammates during this hac
 &nbsp;<br>
 
 ### **Peter**
-<<<<<<< HEAD
-
-My second Hackathon with Code Institute. Great experience, a second time. Had great fun! Worked with such an exciting team. Together, we built what is quite an exciting game project - Hoffle Copter! Learnt new things along the way! Feeling like a pro already! Thanks to Code Institute for this experience. Thanks to Hoffle Copter team for being awesome - up the Hoff! I want to do this again!
-
-[lindedIn](https://www.linkedin.com/in/panzek/)
-=======
 
 My second Hackathon with Code Institute. Great experience, a second time. Had great fun! Worked with such an exciting team. Together, we built what is quite an exciting game project - **Hoffle Copter!** Learnt new things along the way! Feeling like a pro already! Thanks to Code Institute for this experience. Thanks to Hoffle Copter team for being awesome - ***up the Hoff!*** I want to do this again!
 
 [lindedIn](https://www.linkedin.com/in/panzek/)
 
->>>>>>> 9ed0d7bc7f9f8210309d4d1263d40af79bbb46a4
 
 
