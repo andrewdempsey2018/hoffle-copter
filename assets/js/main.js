@@ -71,6 +71,9 @@ let birdColl = new Set();
 player controls to allow shooting */
 let bullets = new Set();
 
+/* keep tract of players points */
+let score = 0;
+
 /* Sprite assets loaded here */
 
 const HELI_SPEED = 300;
@@ -131,6 +134,7 @@ scene("gameplay", async (levelName) => {
         bullet.destroy();
         boomColl.add(new boom(plane.pos.x, plane.pos.y))
         plane.destroy();
+        score += 100;
     });
 
     // check collision between heli and copper
@@ -138,6 +142,7 @@ scene("gameplay", async (levelName) => {
     onCollide("copper", "heli", (copper) => {
         play("coin");
         destroy(copper);
+        score += 1000;
     });
 
     // City Skyline
@@ -152,6 +157,7 @@ scene("gameplay", async (levelName) => {
         bullet.destroy();
         boomColl.add(new boom(saucer.pos.x, saucer.pos.y))
         saucer.destroy();
+        score += 25;
     })
 
     onCollide("bullet", "asteroid", (bullet, asteroid) => {
@@ -166,6 +172,7 @@ scene("gameplay", async (levelName) => {
         bullet.destroy();
         boomColl.add(new boom(bird.pos.x, bird.pos.y))
         bird.destroy();
+        score += 25;
     })
 
     /* Here we read each entry from the level JSON file
@@ -288,6 +295,15 @@ scene("gameplay", async (levelName) => {
 
     onUpdate(() => {
 
+        /* Draw players score */
+        drawText({
+            text: "score: " + score,
+            size: 30,
+            font: "sink",
+            pos: vec2(300, 10),
+            color: rgb(0, 0, 0),
+        })
+
         blimpColl.forEach(blimp => {
             blimp.move();
         });
@@ -365,7 +381,6 @@ scene("gameplay", async (levelName) => {
         //         music.pause()
         //     }
         // })
-
     });
 });
 
