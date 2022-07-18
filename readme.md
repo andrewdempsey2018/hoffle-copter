@@ -321,7 +321,7 @@ To be completed
 
 My second Hackathon with Code Institute. Great experience, a second time. Had great fun! Worked with such an exciting team. Together, we built what is quite an exciting game project - **Hoffle Copter!** Learnt new things along the way! Feeling like a pro already! Thanks to Code Institute for this experience. Thanks to Hoffle Copter team for being awesome - ***up the Hoff!*** I want to do this again!
 
-[lindedIn](https://www.linkedin.com/in/panzek/)
+[linkedIn](https://www.linkedin.com/in/panzek/)
 
 
 
