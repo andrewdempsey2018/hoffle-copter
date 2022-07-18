@@ -254,9 +254,11 @@ The level that is to be loaded is passed to the function as a string. This strin
 
 &nbsp;
 
-### **UFO algorithm**
+### **Copper**
 
-to be completed
+Hidden inside a Copper, a smiley emoji, is a reward a player gets in Hoffle-Copter game. A player gets the reward only when Copper is broken. The only thing that can break a Copper is the heli’Copter gunship, with offensive capability to engage on air targets. So every time Heli’Copter collides with Copper, the Copper is destroyed. The player’s health is then incremented by 1 and the score is incremented by 1000.
+
+![Copper](/assets/sprites/copper.png)
 
 &nbsp;
 
