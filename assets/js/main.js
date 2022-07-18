@@ -12,6 +12,7 @@ import boom from "./explode.js";
 import planetScape from "./planet.js"
 import beachScape from "./beach.js"
 import flag from "./flag.js"
+import bird from "./bird.js"
 
 loadSprite("heli", "./assets/sprites/heli.png", {
     sliceX: 2,
@@ -48,6 +49,7 @@ let boomColl = new Set();
 let planetScapeColl = new Set();
 let beachScapeColl = new Set();
 let flagColl = new Set();
+let birdColl = new Set();
 
 /* Create players bullet collection and handle
 player controls to allow shooting */
@@ -143,6 +145,13 @@ scene("gameplay", async (levelName) => {
         asteroid.destroy();
     })
 
+    onCollide("bullet", "bird", (bullet, bird) => {
+        play("explosion2");
+        bullet.destroy();
+        boomColl.add(new boom(bird.pos.x, bird.pos.y))
+        bird.destroy();
+    })
+
     /* Here we read each entry from the level JSON file
     every one second. If the level file contains an entry 'no spawn' we ignore it
     If the level file contains information on a game object, we instanciate it
@@ -213,6 +222,10 @@ scene("gameplay", async (levelName) => {
         if (gameObject.object === "flag") {
             flagColl.add(new flag(gameObject.x, gameObject.y, gameObject.speed));
         }
+
+        if (gameObject.object === "bird") {
+            birdColl.add(new bird(gameObject.x, gameObject.y, gameObject.xSpeed, gameObject.ySpeed));
+        }
     });
 
     onUpdate(() => {
@@ -272,6 +285,11 @@ scene("gameplay", async (levelName) => {
         // Moving flag
         flagColl.forEach(flag => {
             flag.move();
+        });
+
+        // Moving bird
+        birdColl.forEach(bird => {
+            bird.move();
         });
 
         /* Looping background music
