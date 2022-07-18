@@ -71,15 +71,32 @@ Long live the Hoff!
 * A user should be able to control in game sounds. 
 * A user should enjoy the experience of playing the game.
 
+&nbsp;<br>
+
 ## Wireframes
+
+&nbsp;<br>
+
 ### Level Backgrounds
 
-Space Level
+&nbsp;<br>
+
+One of our main MVPs was to create multiple varied location for the player to explore. We created wireframes of the various locations using a simple paint program. This gave us a good feel for what themes would work and what would not. In the end we decided to restrict ourselves to three levels - Beach (to go with our David Hasslehoff theme), City and Space.
+
+&nbsp;<br>
+
+**Space Level**
+&nbsp;<br>
 ![Image of space level](./assets/readme/space_level.png)
-City Level
+&nbsp;<br>
+**City Level**
+&nbsp;<br>
 ![Image of city level](./assets/readme/city_level.png)
-Beach Level (including update)
+&nbsp;<br>
+**Beach Level (including update)**
+&nbsp;<br>
 ![Image of beach level](./assets/readme/beach_level.png)
+&nbsp;<br>
 ![Image of beach level](./assets/readme/beach_update.png)
 
 ## Further Development Notes
@@ -161,6 +178,7 @@ We used a strict Git workflow throughout the Hackathon. Members created forks of
 * Am I Responsive?
 * Canva - used for creation of Hofflecopter and Lifes a beach slides
 * BFXR - Online tool for sound effect creation of explosion and coin collection tones
+* Paint.net
 
 ## Testing
 
