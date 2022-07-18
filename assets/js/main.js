@@ -39,6 +39,20 @@ loadSprite("gameoverimage", "./assets/ui/gameoverimage.png");
 loadSprite("levelComplete", "./assets/ui/levelcomplete.png");
 loadSprite("starrySky", "./assets/scenery/starry-sky.png");
 
+/* Load game music */
+loadSound("titleScreenMusic", "./assets/music/titlescreen.mp3");
+loadSound("introMusic", "./assets/music/intro.mp3");
+loadSound("bossMusic", "./assets/music/boss.mp3");
+loadSound("endingMusic", "./assets/music/ending.mp3");
+loadSound("gameoverMusic", "./assets/music/gameover.mp3");
+loadSound("level1Music", "./assets/music/level1.mp3");
+loadSound("level2Music", "./assets/music/level3.mp3");
+loadSound("level3Music", "./assets/music/level2.mp3");
+loadSound("levelCompleteMusic", "./assets/music/levelcomplete.mp3");
+
+
+let music = null;
+
 /* Initialise collections that will hold game objects */
 let cityScapeColl = new Set();
 let cloudColl = new Set();
@@ -170,12 +184,40 @@ scene("gameplay", async (levelName) => {
 
     const LEVEL_TIME_SECONDS = 60; //make sure the event timer does not look for out of bounds JSON data
 
-    // If space level, load space background
+    // If city level, load level 1 music
+    if (levelName['levelName'] === 'city') {
+
+        music = play("level1Music", {
+            loop: true
+        })
+    }
+
+    // If space level, load space background and level 2 music
     if (levelName['levelName'] === 'space') {
         const starrySky = add([
             sprite("starrySky"),
             pos(0, 0),
         ]);
+
+        music = play("level2Music", {
+            loop: true
+        })
+    }
+
+    // If beach level, load level 3 music
+    if (levelName['levelName'] === 'beach') {
+        
+        music = play("level3Music", {
+            loop: true
+        })
+    }
+
+    // If beach level, load level 3 music
+    if (levelName['levelName'] === 'boss') {
+        
+        music = play("bossMusic", {
+            loop: true
+        })
     }
 
 
@@ -184,8 +226,9 @@ scene("gameplay", async (levelName) => {
         if (index < LEVEL_TIME_SECONDS) {
             index++;
 
-            // Player has reached the end of the level
-            if (index === 3) {
+            // Player has reached the end of the level DEBUG=3
+            if (index === 58) {
+                music.stop();
                 levelCompleteStart(levelName['levelName']);
             }
         }
@@ -381,7 +424,12 @@ scene("titleScreen", async () => {
         pos(0, 0),
     ]);
 
+    music = play("titleScreenMusic", {
+        loop: true
+    })
+
     onKeyPress("enter", () => {
+        music.stop();
         introStart();
     })
 });
@@ -394,6 +442,7 @@ scene("ending", async () => {
     ]);
 
     onKeyPress("enter", () => {
+        music.stop();
         titleScreenStart();
     })
 });
@@ -406,6 +455,7 @@ scene("gameOver", async () => {
     ]);
 
     onKeyPress("enter", () => {
+        music.stop();
         titleScreenStart();
     })
 });
@@ -417,7 +467,13 @@ scene("levelComplete", async (currentLevel) => {
         pos(0, 0),
     ]);
 
+    music = play("levelCompleteMusic", {
+        loop: false
+    })
+
     onKeyPress("enter", () => {
+
+        music.stop();
 
         if (currentLevel === 'city') {
             level2Start();
@@ -444,7 +500,12 @@ scene("intro", async () => {
         pos(0, 0),
     ]);
 
+    music = play("introMusic", {
+        loop: true
+    })
+
     onKeyPress("enter", () => {
+        music.stop();
         level1Start();
     })
 });
