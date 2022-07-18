@@ -66,7 +66,7 @@ Long live the Hoff!
 
 * A user should be able to load the main game.
 * A user should understand the purpose of the website.
-* A user should be able to active the game.
+* A user should be able to activate the game.
 * A user should be able to find the controls for the game.
 * A user should be able to control in game sounds.
 * A user should enjoy the experience of playing the game.
@@ -123,6 +123,10 @@ One of our main MVPs was to create multiple varied location for the player to ex
 * Loading screen with user instructions included in project
 
 #### Project development done on Monday
+* Improved explosion animation
+* Fixed copper eating heli bug
+* Added static backgrounds for all levels
+* Added favicon
 
 ---
 
@@ -203,6 +207,15 @@ We used a strict Git workflow throughout the Hackathon. Members created forks of
 ### Manual Testing
 * Testing User Stories
 
+| A user should be able to | Proof |
+|----------------------- |------ |
+|Load the main game |The website loads when the deployed link is followed|
+|Understand the purpose of the website |A clear loading screen is included before the game starts. With more time additional HTML functionality could be added to build more of a website around the game to add to the story of Hoffle-copter|
+|Activate the game |The loading screen of the game instructs the user to click here and press enter which activates the game|
+|Find the controls for the game ||
+|Control in game sounds ||
+|Enjoy the experience of playing the game | So HOFL very COPTER much WOW |
+
 ## Code Overview
 &nbsp;<br>
 ### **levelloader.js**
@@ -268,11 +281,12 @@ this.life -= 1;
 ## Credits
 
 ### Images
-* Blimp, Alien, Star, Space background, Explosion - www.asciiart.eu
+* Blimp, Alien, Star, Space background, Explosion, Bird - www.asciiart.eu
 * Sun - www.pinclipart.com
 * UFO - asciiart.website
 * Copper, an ASCII art smiley face - [George Reith](https://codegolf.stackexchange.com/questions/16587/print-a-smiley-face/16857#16857)
 * Flag - emojicombos.com
+* Dragon - [ASCII Art](https://asciiart.cc/view/12177)
 
 ### Sounds
 * Roflcopter
@@ -315,7 +329,9 @@ To be completed
 
 ### **Lucas**
 
-To be completed
+I've had the pleasure of working with a great group of teammates during this hackathon. I have learned more about agile methodology and JavaScript than I ever could imagine going into the event. With great teamwork comes great things! Thank you so much to the ‘Hasslehoff Hackers’ team for making this experience one to remember!
+
+[LinkedIn]( https://www.linkedin.com/in/lucas-behrendt)
 
 &nbsp;<br>
 
