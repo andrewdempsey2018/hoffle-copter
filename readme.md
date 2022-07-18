@@ -178,6 +178,7 @@ We used a strict Git workflow throughout the Hackathon. Members created forks of
 * Am I Responsive?
 * Canva - used for creation of Hofflecopter and Lifes a beach slides
 * BFXR - Online tool for sound effect creation of explosion and coin collection tones
+* Paint.net
 
 ## Testing
 
