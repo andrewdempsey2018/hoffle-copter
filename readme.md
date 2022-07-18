@@ -1,4 +1,19 @@
 # Hofflecopter
+
+&nbsp;<br>
+
+![screenshot](/assets/readme/introsection.png)
+
+&nbsp;<br>
+
+## Introduction
+
+&nbsp;<br>
+
+In order to celebrate World Emoji day, our team decided to explore the roots of the emoji phenomenon. We wanted to celebrate a time when emoji were simple ascii characters :-) This gave us the opportunity to tackle the challenge of creating a great looking application using a highly limited colour palette - black and white. The limitations we set upon ourselves led us to create a retro arcade game using an emoji theme. At some stage during out early team meetings, we discovered that David Hasslehoff better known as 'The Hoff' was born on World Emoji day, 17th of July. This fact led us to create a story based around the actor that suited our theme perfectly!! Our game features multiple levels, story cutscenes, scoring, a wide variety of enemies and a retro soundtrack!
+
+&nbsp;<br>
+
 ## Concept
 A "retro emoji" shooter game. Get the bad guys. Save The Hoff.
 [Play Hofflecopter Here](https://andrewdempsey2018.github.io/hoffle-copter/)
