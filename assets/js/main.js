@@ -73,6 +73,7 @@ let bullets = new Set();
 
 /* keep tract of players points */
 let score = 0;
+let health = 5;
 
 /* Sprite assets loaded here */
 
@@ -137,12 +138,20 @@ scene("gameplay", async (levelName) => {
         score += 100;
     });
 
+    /* player collides with an enemy object, hurt player, destroy enemy */
+    onCollide("enemy", "heli", (enemy) => {
+        play("explosion2");
+        destroy(enemy);
+        health -= 1;
+    });
+
     // check collision between heli and copper
     
     onCollide("copper", "heli", (copper) => {
         play("coin");
         destroy(copper);
         score += 1000;
+        health += 1;
     });
 
     // City Skyline
@@ -304,6 +313,15 @@ scene("gameplay", async (levelName) => {
             color: rgb(0, 0, 0),
         })
 
+        /* Draw players health */
+        drawText({
+            text: "health: " + health,
+            size: 30,
+            font: "sink",
+            pos: vec2(300, 50),
+            color: rgb(0, 0, 0),
+        })
+
         blimpColl.forEach(blimp => {
             blimp.move();
         });
@@ -381,12 +399,23 @@ scene("gameplay", async (levelName) => {
         //         music.pause()
         //     }
         // })
+
+        /* health reaches zero, send player to gameover screen */
+        // Player has reached the end of the level DEBUG=3
+        if (health === 0) {
+            music.stop();
+            gameOverStart();
+        }
     });
 });
 
 /* Functions that trigger the various game scenes */
 
 const titleScreenStart = () => {
+
+    score = 0;
+    health = 5;
+
     go("titleScreen", {
     })
 }
@@ -475,6 +504,11 @@ scene("gameOver", async () => {
         sprite("gameoverimage"),
         pos(0, 0),
     ]);
+
+    music = play("gameoverMusic", {
+        volume: 0.50,
+        loop: false
+    })
 
     onKeyPress("enter", () => {
         music.stop();

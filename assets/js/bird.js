@@ -30,7 +30,8 @@ class bird {
             k.sprite("bird"),
             k.area(),
             k.pos(this.xPos, this.yPos),
-            "bird"
+            "bird",
+            "enemy"
         ]);
 
         this.spr.play("fly")

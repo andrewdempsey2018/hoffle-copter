@@ -17,7 +17,8 @@ class asteroid {
             k.origin('center'),
             k.scale(0.2),
             k.pos(this.xPos, this.yPos),
-            "asteroid"
+            "asteroid",
+            "enemy"
         ]);
     }
 
