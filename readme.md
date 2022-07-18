@@ -25,7 +25,7 @@ F / ESC - toggle fullscreen
 
 ---
 ## Project Brief
-We set out to design a project around the theme of "World Emoji Day" celebrated on 17th July. To satify this goal, we have combined the use of retro ASCII emoji's with The Hoff (born on emoji day), to bring you this exciting game of skill and dexterity. 
+The project brief was to design a final product based around World Emoji Day - 17th July. 
 
 ### Initial Concept Deployment
 ![screenshot](/assets/readme/image1.png)
@@ -119,6 +119,10 @@ One of our main MVPs was to create multiple varied location for the player to ex
 * Work started on presentation video
 * Added explosion animation 
 * Level selection created
+* Beach level with animated birds added
+* Loading screen with user instructions included in project
+
+#### Project development done on Monday
 
 ---
 
@@ -176,15 +180,18 @@ We used a strict Git workflow throughout the Hackathon. Members created forks of
 * Git
 * JS Code
 * Google DevTools - used for testing and development
-* Am I Responsive?
+* Am I Responsive? - used for testing
 * Canva - used for creation of Hofflecopter and Lifes a beach slides
 * BFXR - Online tool for sound effect creation of explosion and coin collection tones
-* Paint.net
+* Paint.net - for creation and manipulation of sprites
 
 ## Testing
 
 ### Bugs Encountered and Resolutions
 * GitHub pages json issue
+
+* Hofflecopter getting eaten by giant smiley face
+
 
 ### Automated Testing
 * W3C Validator
@@ -232,8 +239,30 @@ to be completed
 
 ### **explode.js**
 
+![Image of explosion animation](./assets/sprites/boom.png)
+
+The explosion feature is possible through slicing the png file and animating through those 3 frames like so:
+
 ```
-to be completed
+sliceX: 3,
+    //Animation of explosion
+    anims: {
+        "xplod": {
+            from: 0,
+            to: 1,
+            to: 2,
+            speed: 4,
+            loop: false
+```
+This animation is then called during the ```onCollide()``` phase of game play when a bullet sprite hits an enemy sprite.
+
+The explosion animation is removed from screen by calling the ``` destroy() ``` function after a life counter has reduced to zero
+```
+this.life -= 1;
+
+        if (this.life === 0) {
+            this.spr.destroy();
+            
 ```
 
 ## Credits
@@ -248,6 +277,7 @@ to be completed
 ### Sounds
 * Roflcopter 
 * Sound effects - created by Cheryl
+* Royalty free chip tunes downloaded from [Proud music library](https://www.proudmusiclibrary.com/en/tag/game-boy)
 
 ## Team Members
 
