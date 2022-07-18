@@ -34,7 +34,7 @@
         "object": "boss",
         "x": 1000,
         "y": 100,
-        "xSpeed": -350,
+        "xSpeed": -320,
         "ySpeed": 50
     },
     {

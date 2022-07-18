@@ -25,6 +25,7 @@ class boss {
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
         this.wave = rand(50, 150);
+        this.shoot = 0;
 
         this.spr = k.add([
             k.sprite("boss"),
