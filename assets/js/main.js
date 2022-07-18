@@ -145,6 +145,7 @@ scene("gameplay", async (levelName) => {
         play("explosion2");
         destroy(enemy);
         health -= 1;
+        boomColl.add(new boom(enemy.pos.x, enemy.pos.y))
     });
 
     // check collision between heli and copper
@@ -161,6 +162,7 @@ scene("gameplay", async (levelName) => {
         play("explosion2");
         bullet.destroy();
         blimp.destroy();
+        score += 200;
     });
 
     onCollide("bullet", "saucer", (bullet, saucer) => {
@@ -176,6 +178,7 @@ scene("gameplay", async (levelName) => {
         bullet.destroy();
         boomColl.add(new boom(asteroid.pos.x, asteroid.pos.y))
         asteroid.destroy();
+        score += 25;
     })
 
     onCollide("bullet", "bird", (bullet, bird) => {
