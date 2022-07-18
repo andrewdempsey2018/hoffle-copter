@@ -25,7 +25,7 @@ F / ESC - toggle fullscreen
 
 ---
 ## Project Brief
-The project brief was to design a final product based around World Emoji Day - 17th July. 
+The project brief was to design a final product based around World Emoji Day - 17th July.
 
 ### Initial Concept Deployment
 ![screenshot](/assets/readme/image1.png)
@@ -33,7 +33,7 @@ The project brief was to design a final product based around World Emoji Day - 1
 ## Design Ideas Development
 
 ### Team Call 13/07/2022
-First team call to discuss ideas. 
+First team call to discuss ideas.
 
 #### Project ideas:
 * Some kind of static site with quiz, memory game, how do we make this innovative?
@@ -49,9 +49,9 @@ Overview of meeting : Project decisions, repo set up, technical issues of VSCode
 
 **Project decided upon** - ASCII "retro" emoji themed helicopter JavaScript game.
 
-Main repo set up and shared. Team members forked the project to begin work. Support shared for VSCode and GitHub desktop, commands walked through for team management of merge and pull procedures. 
+Main repo set up and shared. Team members forked the project to begin work. Support shared for VSCode and GitHub desktop, commands walked through for team management of merge and pull procedures.
 
-Kanban board started and tasks assignment started. 
+Kanban board started and tasks assignment started.
 
 #### Extra design decisions made Friday morning
 * Levels - Beach, city, space
@@ -68,7 +68,7 @@ Long live the Hoff!
 * A user should understand the purpose of the website.
 * A user should be able to active the game.
 * A user should be able to find the controls for the game.
-* A user should be able to control in game sounds. 
+* A user should be able to control in game sounds.
 * A user should enjoy the experience of playing the game.
 
 &nbsp;<br>
@@ -117,7 +117,7 @@ One of our main MVPs was to create multiple varied location for the player to ex
 * Fixed problem with GitHub pages deployment
 * Background sound track and user controls added to project
 * Work started on presentation video
-* Added explosion animation 
+* Added explosion animation
 * Level selection created
 * Beach level with animated birds added
 * Loading screen with user instructions included in project
@@ -159,16 +159,16 @@ To deploy the application to Github pages:
 
 ## Technologies Used
 
-&nbsp;<br> 
+&nbsp;<br>
 
 #### **Kaboom.js**
 
 We relied heavily on Kaboom.js (https://kaboomjs.com/). Kaboom is an open source Javascript library that provides many functions common to game development. At its core, Kaboom provides an HTML5 canvas where all drawing takes place. This canvas is then applied to a web page. Kaboom provides tagging functionality that allows game objects to be easily manipulted via a handy reference. The library also provides excellent audio integration with common formats such as MP3 and WAV supported out of the box. There is excellent API documentation available as well as an active Discord community (https://discord.com/invite/aQ6RuQm3TF)
 
-&nbsp;<br> 
+&nbsp;<br>
 
 #### **Github**
-We used a strict Git workflow throughout the Hackathon. Members created forks of the main repo before cloning locally. Commits required 
+We used a strict Git workflow throughout the Hackathon. Members created forks of the main repo before cloning locally. Commits required
 
 &nbsp;<br>
 
@@ -262,7 +262,7 @@ this.life -= 1;
 
         if (this.life === 0) {
             this.spr.destroy();
-            
+
 ```
 
 ## Credits
@@ -275,7 +275,7 @@ this.life -= 1;
 * Flag - emojicombos.com
 
 ### Sounds
-* Roflcopter 
+* Roflcopter
 * Sound effects - created by Cheryl
 * Royalty free chip tunes downloaded from [Proud music library](https://www.proudmusiclibrary.com/en/tag/game-boy)
 
@@ -293,7 +293,7 @@ https://www.linkedin.com/in/andrew-dempsey-20ab40180/
 
 ### **Cheryl**
 
-I have really enjoyed my first Hackathon. With thanks to Code Institute, and my fellow 'Hasslehoff Hackers' for making it an enjoyable experience. This has been a great learning journey gaining new skills in Git deployment and project management through GitHub as well as learning some JavaScript and getting into some image editing. 
+I have really enjoyed my first Hackathon. With thanks to Code Institute, and my fellow 'Hasslehoff Hackers' for making it an enjoyable experience. This has been a great learning journey gaining new skills in Git deployment and project management through GitHub as well as learning some JavaScript and getting into some image editing.
 
 [LinkedIn](www.linkedin.com/in/ccp84)
 
@@ -317,8 +317,11 @@ To be completed
 
 &nbsp;<br>
 
-### **Panzek**
+### **Peter**
 
-To be completed 
+My second Hackathon with Code Institute. Great experience, as always. Had great fun! Worked with such an exciting team. Together, we built what is quite an exciting game project - **Hoffle Copter!** Learnt new things along the way! Feeling like a pro already! Thanks to Code Institute for this experience. Thanks to Hoffle Copter team for being awesome - ***up the Hoff!*** I want to do this again!
+
+[lindedIn](https://www.linkedin.com/in/panzek/)
+
 
 
