@@ -168,14 +168,14 @@ scene("gameplay", async (levelName) => {
     let gameObject = null;
 
     const LEVEL_TIME_SECONDS = 60; //make sure the event timer does not look for out of bounds JSON data
-    
+
     // If space level, load space background
-    if(levelName['levelName'] === 'space') {
+    if (levelName['levelName'] === 'space') {
         const starrySky = add([
-                sprite("starrySky"),
-                pos(0, 0),
-            ]);
-        }
+            sprite("starrySky"),
+            pos(0, 0),
+        ]);
+    }
 
 
     loop(1, () => {
@@ -184,8 +184,8 @@ scene("gameplay", async (levelName) => {
             index++;
 
             // Player has reached the end of the level
-            if(index === 58) { 
-                levelCompleteStart();
+            if (index === 58) {
+                levelCompleteStart(levelName['levelName']);
             }
         }
 
@@ -328,14 +328,14 @@ const titleScreenStart = () => {
 
 const level1Start = () => {
     go("gameplay", {
-        levelName: 'city', 
+        levelName: 'city',
     })
 }
 
 const level2Start = () => {
     go("gameplay", {
         levelName: 'space',
-        
+
     })
 }
 
@@ -366,9 +366,8 @@ const gameOverStart = () => {
     })
 }
 
-const levelCompleteStart = () => {
-    go("levelComplete", {
-    })
+const levelCompleteStart = (levelName) => {
+    go("levelComplete", levelName)
 }
 
 /* game scenes. Kaboom will wipe the previous scene from memory
@@ -386,15 +385,24 @@ scene("titleScreen", async () => {
     })
 });
 
-scene("levelComplete", async () => {
+scene("levelComplete", async (currentLevel) => {
 
     const levelCompleteImage = add([
         sprite("levelComplete"),
         pos(0, 0),
     ]);
 
+    console.log(currentLevel);
+
     onKeyPress("enter", () => {
-        level2Start();
+
+        if (currentLevel === 'city') {
+            level2Start();
+        }
+
+        if (currentLevel === 'space') {
+            level3Start();
+        }
     })
 });
 
