@@ -8,10 +8,11 @@
     },
     {
         "time": "00:02",
-        "object": "flag",
+        "object": "bird",
         "x": 1000,
-        "y": 350,
-        "speed": -100
+        "y": 250,
+        "xSpeed": -100,
+        "ySpeed": 50
     },
     {
         "time": "00:03",
@@ -30,10 +31,11 @@
     },
     {
         "time": "00:05",
-        "object": "saucer",
-        "x": 700,
+        "object": "bird",
+        "x": 1000,
         "y": 150,
-        "speed": -100
+        "xSpeed": -50,
+        "ySpeed": 50
     },
     {
         "time": "00:06",
@@ -45,10 +47,11 @@
     },
     {
         "time": "00:07",
-        "object": "saucer",
-        "x": 700,
-        "y": 150,
-        "speed": -100
+        "object": "bird",
+        "x": 1000,
+        "y": 200,
+        "xSpeed": -150,
+        "ySpeed": 50
     },
     {
         "time": "00:08",
@@ -82,10 +85,11 @@
     },
     {
         "time": "00:12",
-        "object": "no spawn",
+        "object": "bird",
         "x": 1000,
-        "y": 450,
-        "speed": -100
+        "y": 300,
+        "xSpeed": -150,
+        "ySpeed": 50
     },
     {
         "time": "00:13",
@@ -121,11 +125,11 @@
     },
     {
         "time": "00:17",
-        "object": "no spawn",
-        "x": 700,
-        "y": 150,
-        "speed": -100,
-        "size": 50
+        "object": "bird",
+        "x": 1000,
+        "y": 200,
+        "xSpeed": -100,
+        "ySpeed": 50
     },
     {
         "time": "00:18",
@@ -157,26 +161,26 @@
     },
     {
         "time": "00:22",
-        "object": "no spawn",
-        "x": 700,
-        "y": 150,
+        "object": "cloud",
+        "x": 1024,
+        "y": 250,
         "speed": -100,
         "size": 50
     },
     {
         "time": "00:23",
-        "object": "no spawn",
-        "x": 700,
-        "y": 150,
-        "speed": -100,
-        "size": 50
-    },
-    {
-        "time": "00:24",
         "object": "plane",
         "x": 1024,
         "y": 115,
         "speed": -250
+    },
+    {
+        "time": "00:24",
+        "object": "cloud",
+        "x": 1024,
+        "y": 150,
+        "speed": -100,
+        "size": 50
     },
     {
         "time": "00:25",
@@ -203,10 +207,11 @@
     },
     {
         "time": "00:28",
-        "object": "plane",
-        "x": 1024,
-        "y": 115,
-        "speed": -250
+        "object": "bird",
+        "x": 1000,
+        "y": 150,
+        "xSpeed": -250,
+        "ySpeed": 50
     },
     {
         "time": "00:29",
@@ -218,8 +223,8 @@
     },
     {
         "time": "00:30",
-        "object": "no spawn",
-        "x": 700,
+        "object": "cloud",
+        "x": 1024,
         "y": 150,
         "speed": -100,
         "size": 50
@@ -233,14 +238,15 @@
     },
     {
         "time": "00:32",
-        "object": "plane",
+        "object": "cloud",
         "x": 1024,
-        "y": 215,
-        "speed": -250
+        "y": 250,
+        "speed": -100,
+        "size": 50
     },
     {
         "time": "00:33",
-        "object": "plane",
+        "object": "no spawn",
         "x": 1024,
         "y": 115,
         "speed": -250
@@ -249,7 +255,7 @@
         "time": "00:34",
         "object": "cloud",
         "x": 1024,
-        "y": 250,
+        "y": 150,
         "speed": -100,
         "size": 50
     },
@@ -265,13 +271,13 @@
         "time": "00:36",
         "object": "cloud",
         "x": 1024,
-        "y": 150,
+        "y": 250,
         "speed": -100,
         "size": 50
     },
     {
         "time": "00:37",
-        "object": "blimp",
+        "object": "no spawn",
         "x": 700,
         "y": 150,
         "xSpeed": -100,
@@ -281,7 +287,7 @@
         "time": "00:38",
         "object": "cloud",
         "x": 1024,
-        "y": 250,
+        "y": 150,
         "speed": -100,
         "size": 50
     },
@@ -295,24 +301,23 @@
     },
     {
         "time": "00:40",
-        "object": "no spawn",
-        "x": 700,
-        "y": 150,
-        "speed": -100,
-        "size": 50
+        "object": "bird",
+        "x": 1000,
+        "y": 200,
+        "xSpeed": -150,
+        "ySpeed": 50
     },
     {
         "time": "00:41",
-        "object": "no spawn",
-        "x": 700,
-        "y": 150,
-        "speed": -100,
-        "size": 50
+        "object": "plane",
+        "x": 1024,
+        "y": 215,
+        "speed": -200
     },
     {
         "time": "00:42",
-        "object": "no spawn",
-        "x": 700,
+        "object": "cloud",
+        "x": 1024,
         "y": 150,
         "speed": -100,
         "size": 50
@@ -326,9 +331,9 @@
     },
     {
         "time": "00:44",
-        "object": "no spawn",
-        "x": 700,
-        "y": 150,
+        "object": "cloud",
+        "x": 1024,
+        "y": 250,
         "speed": -100,
         "size": 50
     },
@@ -342,8 +347,8 @@
     },
     {
         "time": "00:46",
-        "object": "no spawn",
-        "x": 700,
+        "object": "cloud",
+        "x": 1024,
         "y": 150,
         "speed": -100,
         "size": 50
@@ -358,19 +363,19 @@
     },
     {
         "time": "00:48",
-        "object": "no spawn",
-        "x": 700,
-        "y": 150,
+        "object": "cloud",
+        "x": 1024,
+        "y": 250,
         "speed": -100,
         "size": 50
     },
     {
         "time": "00:49",
-        "object": "no spawn",
-        "x": 700,
-        "y": 150,
-        "speed": -100,
-        "size": 50
+        "object": "bird",
+        "x": 1000,
+        "y": 350,
+        "xSpeed": -150,
+        "ySpeed": 50
     },
     {
         "time": "00:50",
@@ -381,11 +386,11 @@
     },
     {
         "time": "00:51",
-        "object": "no spawn",
-        "x": 700,
+        "object": "blimp",
+        "x": 900,
         "y": 150,
-        "speed": -100,
-        "size": 50
+        "xSpeed": -200,
+        "ySpeed": 50
     },
     {
         "time": "00:52",
@@ -397,11 +402,11 @@
     },
     {
         "time": "00:53",
-        "object": "no spawn",
-        "x": 700,
-        "y": 150,
-        "speed": -100,
-        "size": 50
+        "object": "blimp",
+        "x": 900,
+        "y": 300,
+        "xSpeed": -100,
+        "ySpeed": 50
     },
     {
         "time": "00:54",
