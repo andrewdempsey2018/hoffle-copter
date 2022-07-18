@@ -35,6 +35,7 @@ loadSprite("titlescreen", "./assets/ui/titlescreen.png");
 loadSprite("introImage", "./assets/ui/introimage.png");
 loadSprite("endingImage", "./assets/ui/endingimage.png");
 loadSprite("levelComplete", "./assets/ui/levelcomplete.png");
+loadSprite("starrySky", "./assets/scenery/starry-sky.png");
 
 /* Initialise collections that will hold game objects */
 let cityScapeColl = new Set();
@@ -65,7 +66,6 @@ loadSound("coin", "./assets/sfx/coin.wav");
 loadSound("bgmus", "./assets/soundfile/roflcopter-sound.wav");
 
 scene("gameplay", async (levelName) => {
-
     const heli = add([
         sprite("heli"),
         area(),
@@ -160,6 +160,15 @@ scene("gameplay", async (levelName) => {
     let gameObject = null;
 
     const LEVEL_TIME_SECONDS = 60; //make sure the event timer does not look for out of bounds JSON data
+    
+    // If space level, load space background
+    if(levelName['levelName'] === 'space') {
+        const starrySky = add([
+                sprite("starrySky"),
+                pos(0, 0),
+            ]);
+        }
+
 
     loop(1, () => {
 
@@ -302,13 +311,14 @@ const titleScreenStart = () => {
 
 const level1Start = () => {
     go("gameplay", {
-        levelName: 'city',
+        levelName: 'city', 
     })
 }
 
 const level2Start = () => {
     go("gameplay", {
         levelName: 'space',
+        
     })
 }
 
