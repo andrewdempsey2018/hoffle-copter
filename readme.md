@@ -86,6 +86,7 @@ Beach Level (including update)
 * Background sound track and user controls added to project
 * Work started on presentation video
 * Added explosion animation 
+* Level selection created
 
 ---
 
@@ -116,7 +117,7 @@ To deploy the application to Github pages:
 4. Select the main branch as your source branch (or, another branch or  your choice if applicable)
 5. Click save
 6. The deployed link will be displayed
-7. Click this link to be redirected to the live site
+7. Click this link to be redirected to the live site [Play Hofflecopter Here](https://andrewdempsey2018.github.io/hoffle-copter/)
 
 &nbsp;<br>
 
