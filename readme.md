@@ -66,7 +66,7 @@ Long live the Hoff!
 
 * A user should be able to load the main game.
 * A user should understand the purpose of the website.
-* A user should be able to active the game.
+* A user should be able to activate the game.
 * A user should be able to find the controls for the game.
 * A user should be able to control in game sounds. 
 * A user should enjoy the experience of playing the game.
@@ -203,6 +203,15 @@ We used a strict Git workflow throughout the Hackathon. Members created forks of
 ### Manual Testing
 * Testing User Stories
 
+| A user should be able to | Proof |
+|----------------------- |------ |
+|Load the main game |       |
+|Understand the purpose of the website |       |
+|Activate the game |       |
+|Find the controls for the game |       |
+|Control in game sounds |       |
+|Enjoy the experience of playing the game |
+
 ## Code Overview
 &nbsp;<br>
 ### **levelloader.js**
@@ -262,7 +271,7 @@ this.life -= 1;
 
         if (this.life === 0) {
             this.spr.destroy();
-            
+
 ```
 
 ## Credits
