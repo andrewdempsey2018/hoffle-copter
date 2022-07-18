@@ -10,7 +10,7 @@
 
 &nbsp;<br>
 
-In order to celebrate World Emoji day, our team decided to explore the roots of the emoji phenomenon. We wanted to celebrate a time when emoji were simple ascii characters :-) This gave us the opportunity to tackle the challenge of creating a great looking application using a highly limited colour palette - black and white. The limitations we set upon ourselves led us to create a retro arcade game using an emoji theme. At some stage during out early team meetings, we discovered that David Hasslehoff better known as 'The Hoff' was born on World Emoji day, 17th of July. This fact led us to create a story based around the actor that suited our theme perfectly!! Our game features multiple levels, story cutscenes, scoring, a wide variety of enemies and a retro soundtrack!
+In order to celebrate World Emoji day, our team decided to explore the roots of the emoji phenomenon. We wanted to celebrate a time when emojis were simple ascii characters :-) This gave us the opportunity to tackle the challenge of creating a great looking application using a highly limited colour palette - black and white. The limitations we set upon ourselves led us to create a retro arcade game using an emoji theme. At some stage during out early team meetings, we discovered that David Hasslehoff better known as 'The Hoff' was born on World Emoji day, 17th of July. This fact led us to create a story based around the actor that suited our theme perfectly!! Our game features multiple levels, story cutscenes, scoring, a wide variety of enemies and a retro soundtrack!
 
 &nbsp;<br>
 
@@ -285,7 +285,7 @@ this.life -= 1;
 
 ### **Andrew**
 
-Thank you to Code Institute for giving me this oppertunity to participate in the July 2022 Hackathon celebrating World Emoji Day! Thanks especially to my fellow 'Hasslehoff Hackers' team mates - we had great fun working together and the experience gave me a wonderful oppertunity to gain experience in the agile process as well as honing my Javascript skills.
+Thank you to Code Institute for giving me this opportunity to participate in the July 2022 Hackathon celebrating World Emoji Day! Thanks especially to my fellow 'Hasslehoff Hackers' team mates - we had great fun working together and the experience gave me a wonderful oppertunity to gain experience in the agile process as well as honing my Javascript skills.
 
 https://www.linkedin.com/in/andrew-dempsey-20ab40180/
 
@@ -301,7 +301,9 @@ I have really enjoyed my first Hackathon. With thanks to Code Institute, and my 
 
 ### **Christian**
 
-To be completed
+This was my first Hackathon, and what a team to work with from the get-go! The work that C.I put in behind the scenes to organise this can't go unappreciated, so a big thanks to the C.I team! As a novice coder entering my first Hackathon, I've had nothing but amazing encouragement and support from the 'Hasslehoff Hackers' and want to say I'm so grateful to work with such an amazing group! I'm really proud of the concept and work that has gone into it. This project has furthered my understanding of my current level of JS, GIT and using a new (to me) IDE - VSCode. Well done guys and thanks for the experience!!
+
+[LinkedIn](https://www.linkedin.com/in/christian-brown-ba7741171/)
 
 &nbsp;<br>
 
