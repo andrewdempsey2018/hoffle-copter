@@ -35,11 +35,60 @@ loadSprite("heli", "./assets/sprites/heli.png", {
 
 /* static UI elements */
 loadSprite("titlescreen", "./assets/ui/titlescreen.png");
-loadSprite("introImage", "./assets/ui/introimage.png");
+loadSprite("explainImage", "./assets/ui/explain.png");
+loadSprite("introImage", "./assets/ui/intro.png");
 loadSprite("endingImage", "./assets/ui/endingimage.png");
 loadSprite("gameoverimage", "./assets/ui/gameoverimage.png");
 loadSprite("levelComplete", "./assets/ui/levelcomplete.png");
 loadSprite("starrySky", "./assets/scenery/starry-sky.png");
+
+/* flashing press enter text used on dialogue screens */
+loadSprite("pressEnter", "./assets/ui/pressEnter.png", {
+    sliceY: 2,
+    // Define animations
+    anims: {
+        "flash": {
+            // Starts from frame 0, ends at frame 1 then loops
+            from: 0,
+            to: 1,
+            // Frame per second
+            speed: 4,
+            loop: true
+        },
+    }
+});
+
+/* big copter sprite used on titlescreen */
+loadSprite("bigCopter", "./assets/sprites/bigCopter.png", {
+    sliceX: 2,
+    // Define animations
+    anims: {
+        "fly": {
+            // Starts from frame 0, ends at frame 1 then loops
+            from: 0,
+            to: 1,
+            // Frame per second
+            speed: 8,
+            loop: true
+        },
+    }
+});
+
+/* titlescreen text */
+loadSprite("titleText", "./assets/ui/titletext.png", {
+    sliceY: 2,
+    // Define animations
+    anims: {
+        "rattle": {
+            // Starts from frame 0, ends at frame 1 then loops
+            from: 0,
+            to: 1,
+            // Frame per second
+            speed: 6,
+            loop: true
+        },
+    }
+});
 
 /* Load game music */
 loadSound("titleScreenMusic", "./assets/music/titlescreen.mp3");
@@ -158,7 +207,7 @@ scene("gameplay", async (levelName) => {
     });
 
     // check collision between heli and copper
-    
+
     onCollide("copper", "heli", (copper) => {
         play("coin");
         destroy(copper);
@@ -205,6 +254,7 @@ scene("gameplay", async (levelName) => {
             play("explosion2");
             boomColl.add(new boom(boss.pos.x, boss.pos.y))
             destroy(boss)
+            music.stop();
             endingStart()
         })
     })
@@ -251,7 +301,7 @@ scene("gameplay", async (levelName) => {
 
     // If beach level, load level 3 music
     if (levelName['levelName'] === 'beach') {
-        
+
         music = play("level3Music", {
             volume: 0.50,
             loop: true
@@ -260,7 +310,7 @@ scene("gameplay", async (levelName) => {
 
     // If beach level, load level 3 music
     if (levelName['levelName'] === 'boss') {
-        
+
         music = play("bossMusic", {
             volume: 0.50,
             loop: true
@@ -500,6 +550,11 @@ const endingStart = () => {
     })
 }
 
+const explainStart = () => {
+    go("explain", {
+    })
+}
+
 const gameOverStart = () => {
     go("gameOver", {
     })
@@ -514,11 +569,31 @@ const levelCompleteStart = (levelName) => {
 
 scene("titleScreen", async () => {
 
-    const titleScreenImage = add([
-        sprite("titlescreen"),
-        pos(0, 0),
+    const titleText = add([
+        sprite("titleText"),
+        pos(140, 10),
     ]);
 
+    titleText.play("rattle");
+
+    const bigCopter = add([
+        sprite("bigCopter"),
+        pos(0, 230),
+    ]);
+
+    bigCopter.play("fly");
+
+    const pressEnter = add([
+        sprite("pressEnter"),
+        pos(530, 650),
+    ]);
+
+    //set up the game screen area
+    onKeyPress("f", () => {
+        fullscreen(!isFullscreen())
+    });
+
+    pressEnter.play("flash");
     music = play("titleScreenMusic", {
         volume: 0.50,
         loop: true
@@ -528,14 +603,63 @@ scene("titleScreen", async () => {
         music.stop();
         introStart();
     })
+
+    onUpdate(() => {
+        bigCopter.move(80, 0);
+
+        if (bigCopter.pos.x >= 1024) {
+            bigCopter.pos.x = -703;
+        }
+    });
+});
+
+scene("explain", async () => {
+
+    const explainScreenImage = add([
+        sprite("explainImage"),
+        pos(0, 0),
+    ]);
+
+    const pressEnter = add([
+        sprite("pressEnter"),
+        pos(570, 630),
+    ]);
+
+    pressEnter.play("flash");
+
+    //set up the game screen area
+    onKeyPress("f", () => {
+        fullscreen(!isFullscreen())
+    });
+
+    onKeyPress("enter", () => {
+        titleScreenStart();
+    })
 });
 
 scene("ending", async () => {
+
+    music = play("endingMusic", {
+        volume: 0.50,
+        loop: false
+    })
+
+    const pressEnter = add([
+        sprite("pressEnter"),
+        pos(570, 630),
+    ]);
+
+    pressEnter.play("flash");
 
     const endingScreen = add([
         sprite("endingImage"),
         pos(0, 0),
     ]);
+
+    //set up the game screen area
+    onKeyPress("f", () => {
+        fullscreen(!isFullscreen())
+    });
 
     onKeyPress("enter", () => {
         music.stop();
@@ -555,6 +679,11 @@ scene("gameOver", async () => {
         loop: false
     })
 
+    //set up the game screen area
+    onKeyPress("f", () => {
+        fullscreen(!isFullscreen())
+    });
+
     onKeyPress("enter", () => {
         music.stop();
         titleScreenStart();
@@ -568,10 +697,22 @@ scene("levelComplete", async (currentLevel) => {
         pos(0, 0),
     ]);
 
+    const pressEnter = add([
+        sprite("pressEnter"),
+        pos(570, 630),
+    ]);
+
+    pressEnter.play("flash");
+
     music = play("levelCompleteMusic", {
         volume: 0.50,
         loop: false
     })
+
+    //set up the game screen area
+    onKeyPress("f", () => {
+        fullscreen(!isFullscreen())
+    });
 
     onKeyPress("enter", () => {
 
@@ -607,12 +748,26 @@ scene("intro", async () => {
         loop: true
     })
 
+    const pressEnter = add([
+        sprite("pressEnter"),
+        pos(530, 650),
+    ]);
+
+    pressEnter.play("flash");
+
+    //set up the game screen area
+    onKeyPress("f", () => {
+        fullscreen(!isFullscreen())
+    });
+
     onKeyPress("enter", () => {
         music.stop();
         level1Start();
     })
 });
 
-/* On first load of the application, run the title screen */
+/* Give the game canvas focus so that the users input registers */
+k.canvas.focus()
 
-titleScreenStart();
+/* On first load of the application, display the controls to the player */
+explainStart();
