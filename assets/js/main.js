@@ -398,10 +398,6 @@ scene("gameplay", async (levelName) => {
             color: rgb(0, 0, 0),
         })
 
-        objectCollection.forEach(object => {
-            object.move();
-        });
-
         boomColl.forEach(boom => {
             boom.animate();
         });
