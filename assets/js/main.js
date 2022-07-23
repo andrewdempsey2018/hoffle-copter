@@ -59,7 +59,7 @@ loadSprite("pressEnter", "./assets/ui/pressEnter.png", {
 });
 
 /* big copter sprite used on titlescreen */
-loadSprite("bigCopter", "./assets/sprites/bigCopter.png", {
+loadSprite("bigCopter", "./assets/sprites/bigcopter.png", {
     sliceX: 2,
     // Define animations
     anims: {
