@@ -176,11 +176,11 @@ scene("gameplay", async (levelName) => {
 
     /* Collision between bullets and enemys */
 
-    onCollide("bullet", "plane", (bullet, plane) => {
+    onCollide("bullet", "enemy", (bullet, enemy) => {
         play("explosion2");
         bullet.destroy();
-        boomColl.add(new boom(plane.pos.x, plane.pos.y))
-        plane.destroy();
+        boomColl.add(new boom(enemy.pos.x, enemy.pos.y))
+        enemy.destroy();
         score += 100;
     });
 
@@ -207,38 +207,6 @@ scene("gameplay", async (levelName) => {
         score += 1000;
         health += 1;
     });
-
-    // City Skyline
-    onCollide("bullet", "blimp", (bullet, blimp) => {
-        play("explosion2");
-        bullet.destroy();
-        blimp.destroy();
-        score += 200;
-    });
-
-    onCollide("bullet", "saucer", (bullet, saucer) => {
-        play("explosion2");
-        bullet.destroy();
-        boomColl.add(new boom(saucer.pos.x, saucer.pos.y))
-        saucer.destroy();
-        score += 25;
-    })
-
-    onCollide("bullet", "asteroid", (bullet, asteroid) => {
-        play("explosion2");
-        bullet.destroy();
-        boomColl.add(new boom(asteroid.pos.x, asteroid.pos.y))
-        asteroid.destroy();
-        score += 25;
-    })
-
-    onCollide("bullet", "bird", (bullet, bird) => {
-        play("explosion2");
-        bullet.destroy();
-        boomColl.add(new boom(bird.pos.x, bird.pos.y))
-        bird.destroy();
-        score += 25;
-    })
 
     onCollide("bullet", "boss", (bullet, boss) => {
         bullet.destroy();
