@@ -15,6 +15,8 @@ import flag from "./flag.js"
 import bird from "./bird.js"
 import boss from "./boss.js"
 import bossbullet from "./bossbullet.js"
+//import baseObject from "./baseObject.js"
+import Submarine from "./submarine.js"
 
 loadSprite("heli", "./assets/sprites/heli.png", {
     sliceX: 2,
@@ -56,18 +58,9 @@ loadSound("levelCompleteMusic", "./assets/music/levelcomplete.mp3");
 let music = null;
 
 /* Initialise collections that will hold game objects */
-let cityScapeColl = new Set();
-let cloudColl = new Set();
-let blimpColl = new Set();
-let planeColl = new Set();
-let saucerColl = new Set();
-let asteroidColl = new Set();
+let objectCollection = new Set();
 let collectableColl = new Set();
 let boomColl = new Set();
-let planetScapeColl = new Set();
-let beachScapeColl = new Set();
-let flagColl = new Set();
-let birdColl = new Set();
 let bossColl = new Set();
 let bossbulletColl = new Set();
 
@@ -283,15 +276,15 @@ scene("gameplay", async (levelName) => {
         gameObject = level[index];
 
         if (gameObject.object === "blimp") {
-            blimpColl.add(new blimp(gameObject.x, gameObject.y, gameObject.xSpeed, gameObject.ySpeed));
+            objectCollection.add(new blimp(gameObject.x, gameObject.y, gameObject.xSpeed, gameObject.ySpeed));
         }
 
         if (gameObject.object === "cloud") {
-            cloudColl.add(new cloud(gameObject.x, gameObject.y, gameObject.speed, gameObject.sized));
+            objectCollection.add(new cloud(gameObject.x, gameObject.y, gameObject.speed, gameObject.sized));
         }
 
         if (gameObject.object === "plane") {
-            planeColl.add(new plane(gameObject.x, gameObject.y, gameObject.speed));
+            objectCollection.add(new plane(gameObject.x, gameObject.y, gameObject.speed));
         }
 
         if (gameObject.object === "copper") {
@@ -299,35 +292,39 @@ scene("gameplay", async (levelName) => {
         }
 
         if (gameObject.object === "cityScape") {
-            cityScapeColl.add(new cityScape(gameObject.x, gameObject.y, gameObject.speed));
+            objectCollection.add(new cityScape(gameObject.x, gameObject.y, gameObject.speed));
         }
 
         if (gameObject.object === "asteroid") {
-            asteroidColl.add(new asteroid(gameObject.x, gameObject.y, gameObject.speed));
+            objectCollection.add(new asteroid(gameObject.x, gameObject.y, gameObject.speed));
         }
 
         if (gameObject.object === "saucer") {
-            saucerColl.add(new saucer(gameObject.x, gameObject.y, gameObject.speed));
+            objectCollection.add(new saucer(gameObject.x, gameObject.y, gameObject.speed));
         }
 
         if (gameObject.object === "planetScape") {
-            planetScapeColl.add(new planetScape(gameObject.x, gameObject.y, gameObject.speed));
+            objectCollection.add(new planetScape(gameObject.x, gameObject.y, gameObject.speed));
         }
 
         if (gameObject.object === "beachScape") {
-            beachScapeColl.add(new beachScape(gameObject.x, gameObject.y, gameObject.speed));
+            objectCollection.add(new beachScape(gameObject.x, gameObject.y, gameObject.speed));
         }
 
         if (gameObject.object === "flag") {
-            flagColl.add(new flag(gameObject.x, gameObject.y, gameObject.speed));
+            objectCollection.add(new flag(gameObject.x, gameObject.y, gameObject.speed));
         }
 
         if (gameObject.object === "bird") {
-            birdColl.add(new bird(gameObject.x, gameObject.y, gameObject.xSpeed, gameObject.ySpeed));
+            objectCollection.add(new bird(gameObject.x, gameObject.y, gameObject.xSpeed, gameObject.ySpeed));
         }
 
         if (gameObject.object === "boss") {
             bossColl.add(new boss(gameObject.x, gameObject.y, gameObject.xSpeed, gameObject.ySpeed));
+        }
+
+        if (gameObject.object === "submarine") {
+            objectCollection.add(new Submarine(gameObject.x, gameObject.y, gameObject.speed));
         }
     });
 
@@ -351,8 +348,8 @@ scene("gameplay", async (levelName) => {
             color: rgb(0, 0, 0),
         })
 
-        blimpColl.forEach(blimp => {
-            blimp.move();
+        objectCollection.forEach(object => {
+            object.move();
         });
 
         boomColl.forEach(boom => {
@@ -361,56 +358,6 @@ scene("gameplay", async (levelName) => {
 
         bullets.forEach(bullet => {
             bullet.move();
-        });
-
-        // Moving Cityscape 
-        cityScapeColl.forEach(cityScape => {
-            cityScape.move();
-        });
-
-        // Moving Planetscape 
-        planetScapeColl.forEach(planetScape => {
-            planetScape.move();
-        });
-
-        // Moving Beachscape 
-        beachScapeColl.forEach(beachScape => {
-            beachScape.move();
-        });
-
-        // Moving Clouds in background
-        cloudColl.forEach(cloud => {
-            cloud.move();
-        });
-
-        //Moving copper game object
-        collectableColl.forEach(collectable => {
-            collectable.move()
-        })
-
-        // Moving plane
-        planeColl.forEach(plane => {
-            plane.move();
-        });
-
-        // Moving asteroid
-        asteroidColl.forEach(asteroid => {
-            asteroid.move();
-        });
-
-        // Moving saucer
-        saucerColl.forEach(saucer => {
-            saucer.move();
-        });
-
-        // Moving flag
-        flagColl.forEach(flag => {
-            flag.move();
-        });
-
-        // Moving bird
-        birdColl.forEach(bird => {
-            bird.move();
         });
 
         // Moving boss
@@ -427,6 +374,11 @@ scene("gameplay", async (levelName) => {
         // Moving bossbullet
         bossbulletColl.forEach(bossbullet => {
             bossbullet.move();
+        });
+
+        // Moving game objects
+        objectCollection.forEach(object => {
+            object.move();
         });
 
         /* Looping background music

@@ -14,8 +14,8 @@
         "speed": -200
     },
     {
-        "time": "00:03",
-        "object": "cityScape",
+        "time": "00:03 cityScape",
+        "object": "submarine",
         "x": 1000,
         "y": 450,
         "speed": -100
