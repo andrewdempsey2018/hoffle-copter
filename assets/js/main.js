@@ -108,7 +108,6 @@ let music = null;
 
 /* Initialise collections that will hold game objects */
 let objectCollection = new Set();
-let collectableColl = new Set();
 let boomColl = new Set();
 let bossColl = new Set();
 let bossbulletColl = new Set();
@@ -306,7 +305,7 @@ scene("gameplay", async (levelName) => {
         }
 
         if (gameObject.object === "copper") {
-            collectableColl.add(new collectable(gameObject.x, gameObject.y, gameObject.speed));
+            objectCollection.add(new collectable(gameObject.x, gameObject.y, gameObject.speed));
         }
 
         if (gameObject.object === "cityScape") {
