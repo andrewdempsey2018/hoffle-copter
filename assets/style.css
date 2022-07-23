@@ -1,7 +1,7 @@
 /* Styling section for Background Scenery */
 
 body {
-    background-image: url(/hoffle-copter/assets/scenery/outer-space.png);
+    background-image: url("scenery/outer-space.png");
     background-repeat: repeat;
 }
 
